@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Nomiaruki_App
 //
-//  Created by 和田絢也 on 2015/08/25.
+//  Created by 荒川 on 2015/08/25.
 //  Copyright (c) 2015年 alancodvo. All rights reserved.
 //
 
