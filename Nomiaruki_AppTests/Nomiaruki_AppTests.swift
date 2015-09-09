@@ -2,7 +2,7 @@
 //  Nomiaruki_AppTests.swift
 //  Nomiaruki_AppTests
 //
-//  Created by 和田絢也 on 2015/08/25.
+//  Created by 酒好き on 2015/08/25.
 //  Copyright (c) 2015年 alancodvo. All rights reserved.
 //
 
