@@ -71,7 +71,7 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
         let displayHeight: CGFloat = self.view.frame.height
         
         // TableViewの生成する(status barの高さ分ずらして表示).
-        myTableView = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight - barHeight))
+        myTableView = UITableView(frame: CGRect(x: 0, y: barHeight + 100, width: displayWidth, height: displayHeight - barHeight))
         
         // Cell名の登録をおこなう.
         myTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
