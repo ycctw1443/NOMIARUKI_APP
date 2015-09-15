@@ -37,11 +37,6 @@ class FirstViewController: UIViewController, UISearchBarDelegate {
         mySearchBar.frame = CGRectMake(0, 0, 300, 80)
         mySearchBar.layer.position = CGPoint(x: self.view.bounds.width/2, y: 100)
         
-        // 影をつける.
-        mySearchBar.layer.shadowColor = UIColor.blackColor().CGColor
-        mySearchBar.layer.shadowOpacity = 0.5
-        mySearchBar.layer.masksToBounds = false
-        
         // キャンセルボタンを有効にする.
         mySearchBar.showsCancelButton = true
         
@@ -49,10 +44,7 @@ class FirstViewController: UIViewController, UISearchBarDelegate {
         mySearchBar.showsBookmarkButton = false
         
         // バースタイルをDefaultに設定する.
-        mySearchBar.searchBarStyle = UISearchBarStyle.Default
-        
-        // タイトルを設定する.
-        mySearchBar.prompt = "タイトル"
+        mySearchBar.searchBarStyle = UISearchBarStyle.Minimal
         
         // 説明文を設定する.
         mySearchBar.placeholder = "ここに入力してください"
