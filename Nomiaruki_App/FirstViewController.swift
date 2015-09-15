@@ -30,6 +30,7 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
     
     // Tableで使用する配列を設定する
     private let myItems: NSArray = ["TEST1", "TEST2", "TEST3"]
+    private let myItems2: NSArray = ["TEST1", "TEST2", "TEST3"]
     private var myTableView: UITableView!
     
     
@@ -157,10 +158,11 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         // 再利用するCellを取得する.
-        let cell = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyCell")
         
         // Cellに値を設定する.
         cell.textLabel!.text = "\(myItems[indexPath.row])"
+        cell.detailTextLabel?.text = "\(myItems2[indexPath.row])"
         
         return cell
     }
