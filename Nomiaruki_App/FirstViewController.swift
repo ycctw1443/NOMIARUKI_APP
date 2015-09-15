@@ -27,13 +27,9 @@ class FirstViewController: UIViewController, UISearchBarDelegate {
     }
     
     private var mySearchBar: UISearchBar!
-    private var myLabel : UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // 背景を白に設定する.
-        self.view.backgroundColor = UIColor.whiteColor()
         
         // 検索バーを作成する.
         mySearchBar = UISearchBar()
@@ -70,30 +66,12 @@ class FirstViewController: UIViewController, UISearchBarDelegate {
         // 検索バーをViewに追加する.
         self.view.addSubview(mySearchBar)
         
-        // UITextFieldを作成する.
-        myLabel = UILabel(frame: CGRectMake(0,0,200,30))
-        myLabel.center = CGPoint(x: self.view.frame.width/2, y: self.view.frame.height/2)
-        myLabel.text = ""
-        myLabel.layer.borderWidth = 1.0
-        myLabel.layer.borderColor = UIColor.grayColor().CGColor
-        myLabel.layer.cornerRadius = 10.0
-        
-        // Viewに追加する.
-        self.view.addSubview(myLabel)
-    }
-    
-    /*
-    テキストが変更される毎に呼ばれる
-    */
-    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        myLabel.text = searchText
-    }
+        }
     
     /*
     Cancelボタンが押された時に呼ばれる
     */
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
-        myLabel.text = ""
         mySearchBar.text = ""
     }
     
@@ -101,7 +79,6 @@ class FirstViewController: UIViewController, UISearchBarDelegate {
     Searchボタンが押された時に呼ばれる
     */
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        myLabel.text = "Searching"
         mySearchBar.text = ""
         self.view.endEditing(true)
     }
