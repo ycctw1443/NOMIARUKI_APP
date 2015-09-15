@@ -25,10 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let myFirstTab: UIViewController = FirstViewController()
         let mySecondTab: UIViewController = SecondViewController()
         let myThirdTab: UIViewController = ThirdViewController()
-        let myFifthTab: UIViewController = FifthViewController()
+        let myForthTab: UIViewController = ForthViewController()
         
         // タブを要素に持つArrayの.を作成する.
-        let myTabs = NSArray(objects: myFirstTab, mySecondTab, myThirdTab, myFifthTab)
+        let myTabs = NSArray(objects: myFirstTab, mySecondTab, myThirdTab, myForthTab)
         
         // UITabControllerの作成する.
         myTabBarController = UITabBarController()
