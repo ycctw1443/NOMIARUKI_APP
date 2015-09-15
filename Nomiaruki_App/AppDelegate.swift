@@ -24,9 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Tabに設定するViewControllerのインスタンスを生成.
         let myFirstTab: UIViewController = FirstViewController()
         let mySecondTab: UIViewController = SecondViewController()
+        let myThirdTab: UIViewController = ThirdViewController()
+        let myFifthTab: UIViewController = FifthViewController()
         
         // タブを要素に持つArrayの.を作成する.
-        let myTabs = NSArray(objects: myFirstTab, mySecondTab)
+        let myTabs = NSArray(objects: myFirstTab, mySecondTab, myThirdTab, myFifthTab)
         
         // UITabControllerの作成する.
         myTabBarController = UITabBarController()

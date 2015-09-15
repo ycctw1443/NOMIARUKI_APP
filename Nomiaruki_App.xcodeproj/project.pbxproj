@@ -15,6 +15,8 @@
 		B27DA5DE1B8C3CE500A20569 /* Nomiaruki_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27DA5DD1B8C3CE500A20569 /* Nomiaruki_AppTests.swift */; };
 		E736401B1BA84718006B0368 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736401A1BA84718006B0368 /* FirstViewController.swift */; };
 		E736401D1BA84737006B0368 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736401C1BA84737006B0368 /* SecondViewController.swift */; };
+		E736401F1BA848DF006B0368 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736401E1BA848DF006B0368 /* ThirdViewController.swift */; };
+		E73640211BA848EB006B0368 /* FifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73640201BA848EB006B0368 /* FifthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		B27DA5DD1B8C3CE500A20569 /* Nomiaruki_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nomiaruki_AppTests.swift; sourceTree = "<group>"; };
 		E736401A1BA84718006B0368 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		E736401C1BA84737006B0368 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		E736401E1BA848DF006B0368 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		E73640201BA848EB006B0368 /* FifthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FifthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				B27DA5C71B8C3CE400A20569 /* AppDelegate.swift */,
+				E736401E1BA848DF006B0368 /* ThirdViewController.swift */,
+				E73640201BA848EB006B0368 /* FifthViewController.swift */,
 				E736401A1BA84718006B0368 /* FirstViewController.swift */,
 				E736401C1BA84737006B0368 /* SecondViewController.swift */,
 				B27DA5C91B8C3CE400A20569 /* ViewController.swift */,
@@ -218,8 +224,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E73640211BA848EB006B0368 /* FifthViewController.swift in Sources */,
 				E736401D1BA84737006B0368 /* SecondViewController.swift in Sources */,
 				E736401B1BA84718006B0368 /* FirstViewController.swift in Sources */,
+				E736401F1BA848DF006B0368 /* ThirdViewController.swift in Sources */,
 				B27DA5CA1B8C3CE400A20569 /* ViewController.swift in Sources */,
 				B27DA5C81B8C3CE400A20569 /* AppDelegate.swift in Sources */,
 			);
