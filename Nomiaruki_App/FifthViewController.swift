@@ -16,8 +16,8 @@ class FifthViewController: UIViewController {
         // Viewの背景色をGreenに設定する.
         self.view.backgroundColor = UIColor.greenColor()
         
-        // tabBarItemのアイコンをFeaturedに、タグを2と定義する.
-        self.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.Featured, tag: 2)
+        // tabBarItemのアイコンをContactsに、タグを4と定義する.
+        self.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.Contacts, tag: 4)
     }
     
     required init(coder aDecoder: NSCoder) {

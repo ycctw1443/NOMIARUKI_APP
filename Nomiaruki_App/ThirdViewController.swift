@@ -15,9 +15,9 @@ class ThirdViewController: UIViewController {
         
         // Viewの背景色をGreenに設定する.
         self.view.backgroundColor = UIColor.greenColor()
-        
-        // tabBarItemのアイコンをFeaturedに、タグを2と定義する.
-        self.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.Featured, tag: 2)
+
+        // tabBarItemのアイコンをFavotitesに、タグを3と定義する.
+        self.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.Favorites, tag: 3)
     }
     
     required init(coder aDecoder: NSCoder) {
