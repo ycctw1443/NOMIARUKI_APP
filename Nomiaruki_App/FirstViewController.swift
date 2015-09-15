@@ -163,7 +163,10 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
         // Cellに値を設定する.
         cell.textLabel!.text = "\(myItems[indexPath.row])"
         cell.detailTextLabel?.text = "\(myItems2[indexPath.row])"
+        //背景画像の設定
+        cell.backgroundColor = UIColor(patternImage: UIImage(named: "kubota.jpg")!)
         
         return cell
     }
+    
 }
