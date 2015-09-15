@@ -36,6 +36,25 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        // ロゴLabelを作成.
+        let myLogoLabel: UILabel = UILabel(frame: CGRectMake(0,0,200,50))
+        
+        // 枠を丸くする.
+        myLogoLabel.layer.masksToBounds = true
+        
+        // コーナーの半径.
+        myLogoLabel.layer.cornerRadius = 20.0
+        
+        // ロゴLabelに文字を代入.
+        myLogoLabel.text = "食べ合わせアプリ"
+        
+        // 文字の色を白にする.
+        myLogoLabel.textColor = UIColor.whiteColor()
+        
+        // Textを中央寄せにする.
+        myLogoLabel.textAlignment = NSTextAlignment.Center
+        
         // 検索バーを作成する.
         mySearchBar = UISearchBar()
         mySearchBar.delegate = self
@@ -69,6 +88,15 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
         // Viewの高さと幅を取得する.
         let displayWidth: CGFloat = self.view.frame.width
         let displayHeight: CGFloat = self.view.frame.height
+        
+        // 配置する座標を設定する.
+        myLogoLabel.layer.position = CGPoint(x: self.view.bounds.width/2,y: barHeight + 30)
+        
+        // ロゴの背景色を設定する。
+        myLogoLabel.backgroundColor = UIColor.blueColor()
+        
+        // ViewにロゴLabelを追加.
+        self.view.addSubview(myLogoLabel)
         
         // TableViewの生成する(status barの高さ分ずらして表示).
         myTableView = UITableView(frame: CGRect(x: 0, y: barHeight + 100, width: displayWidth, height: displayHeight - barHeight))
