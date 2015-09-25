@@ -29,8 +29,8 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
     private var mySearchBar: UISearchBar!
     
     // Tableで使用する配列を設定する
-    private let myItems: NSArray = ["TEST1", "TEST2", "TEST3"]
-    private let myItems2: NSArray = ["TEST1", "TEST2", "TEST3"]
+    private let myItems: NSArray = ["久保田", "栃尾の油揚げ", "長岡技大第三食堂"]
+    private let myItems2: NSArray = ["人気の日本酒", "人気の料理", "人気の店"]
     private var myTableView: UITableView!
     
     
@@ -135,13 +135,6 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
         super.didReceiveMemoryWarning()
     }
     
-    /*
-    Cellが選択された際に呼び出されるデリゲートメソッド.
-    */
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("Num: \(indexPath.row)")
-        println("Value: \(myItems[indexPath.row])")
-    }
     
     /*
     Cellの総数を返すデータソースメソッド.
@@ -163,8 +156,12 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
         // Cellに値を設定する.
         cell.textLabel!.text = "\(myItems[indexPath.row])"
         cell.detailTextLabel?.text = "\(myItems2[indexPath.row])"
+        
         //背景画像の設定
-        cell.backgroundColor = UIColor(patternImage: UIImage(named: "kubota.jpg")!)
+        //cell.backgroundColor = UIColor(patternImage: UIImage(named: "kubota.jpg")!)
+        let myImage = UIImage(named: "kubota.jpg")
+        cell.imageView?.image = myImage
+        
         
         return cell
     }
