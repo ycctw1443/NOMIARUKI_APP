@@ -14,17 +14,43 @@ class PopularSakeViewController: UIViewController {
         super.viewDidLoad()
         
         // 背景色を設定.
-        self.view.backgroundColor = UIColor.blueColor()
+        self.view.backgroundColor = UIColor.whiteColor()
         
         // ボタンを作成.
-        let backButton: UIButton = UIButton(frame: CGRectMake(0,0,120,50))
-        backButton.backgroundColor = UIColor.redColor();
+        let backButton: UIButton = UIButton(frame: CGRectMake(0,0,70,30))
+        //backButton.backgroundColor = UIColor.blueColor();
         backButton.layer.masksToBounds = true
-        backButton.setTitle("Back", forState: .Normal)
-        backButton.layer.cornerRadius = 20.0
-        backButton.layer.position = CGPoint(x: self.view.bounds.width/2 , y:self.view.bounds.height-50)
+        backButton.setTitle("←Back", forState: .Normal)
+        backButton.setTitleColor(UIColor.orangeColor(), forState: .Normal)
+        //backButton.layer.cornerRadius = 20.0
+        backButton.layer.position = CGPoint(x: 40 , y:40)
         backButton.addTarget(self, action: "onClickMyButton:", forControlEvents: .TouchUpInside)
         self.view.addSubview(backButton);
+        
+        
+        // Labelを作成.
+        let myLabel: UILabel = UILabel(frame: CGRectMake(0,0,200,50))
+        // Labelに文字を代入.
+        myLabel.text = "おすすめ食べ合わせ"
+        // 文字の色を白にする.
+        myLabel.textColor = UIColor.blackColor()
+        // Textを中央寄せにする.
+        myLabel.textAlignment = NSTextAlignment.Center
+        // 配置する座標を設定する.
+        myLabel.layer.position = CGPoint(x: self.view.bounds.width/2,y: 40)
+        // ViewにLabelを追加.
+        self.view.addSubview(myLabel)
+    
+        
+        //
+        //テーブルの生成
+        //
+        // Tableで使用する配列を設定する
+        private let myItems: NSArray = ["さきイカ","貝柱", ""]
+        private var myTableView: UITableView!
+        
+        
+        
     }
     
     /*
