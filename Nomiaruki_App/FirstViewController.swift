@@ -176,24 +176,35 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
         switch num{
         
         case 0:
-            //人気の酒を選択した場合の画面遷移
+            //人気の日本酒を選択した場合の画面遷移
             // 遷移するViewを定義する.
-            let myPopularSakeViewController: UIViewController = PopularSakeViewController()
-            
+            let myPopularViewController: UIViewController = PopularSakeViewController()
             // アニメーションを設定する.
-            myPopularSakeViewController.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
-            
+            myPopularViewController.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
             // Viewの移動する.
-            self.presentViewController(myPopularSakeViewController, animated: true, completion: nil)
+            self.presentViewController(myPopularViewController, animated: true, completion: nil)
             
         case 1:
-            break
+            //人気の料理を選択した場合の画面遷移
+            // 遷移するViewを定義する.
+            let myPopularViewController: UIViewController = PopularFoodViewController()
+            // アニメーションを設定する.
+            myPopularViewController.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+            // Viewの移動する.
+            self.presentViewController(myPopularViewController, animated: true, completion: nil)
+            
         case 2:
-            break
+            //人気の店を選択した場合の画面遷移
+            // 遷移するViewを定義する.
+            let myPopularViewController: UIViewController = PopularPlaceViewController()
+            // アニメーションを設定する.
+            myPopularViewController.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+            // Viewの移動する.
+            self.presentViewController(myPopularViewController, animated: true, completion: nil)
+            
         default:
             break
         }
-        
 
     }
     
