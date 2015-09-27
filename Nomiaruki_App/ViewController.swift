@@ -4,7 +4,6 @@
 //
 //  Created by 酒好き@荒川&和田 on 2015/08/25.
 //  Copyright (c) 2015年 alancodvo. All rights reserved.
-// Xcode Fuck
 //
 
 import UIKit
