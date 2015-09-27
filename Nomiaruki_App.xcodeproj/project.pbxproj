@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B228EE111BB7D2C4001EE0C2 /* PopularFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B228EE101BB7D2C4001EE0C2 /* PopularFoodViewController.swift */; };
 		B228EE131BB7D2F2001EE0C2 /* PopularPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B228EE121BB7D2F2001EE0C2 /* PopularPlaceViewController.swift */; };
+		B24E1ECF1BB89ED600E5A4B6 /* tochio.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B24E1ECE1BB89ED600E5A4B6 /* tochio.jpeg */; settings = {ASSET_TAGS = (); }; };
 		B27DA5C81B8C3CE400A20569 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27DA5C71B8C3CE400A20569 /* AppDelegate.swift */; };
 		B27DA5CA1B8C3CE400A20569 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27DA5C91B8C3CE400A20569 /* ViewController.swift */; };
 		B27DA5CD1B8C3CE400A20569 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27DA5CB1B8C3CE400A20569 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		B228EE101BB7D2C4001EE0C2 /* PopularFoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularFoodViewController.swift; sourceTree = "<group>"; };
 		B228EE121BB7D2F2001EE0C2 /* PopularPlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularPlaceViewController.swift; sourceTree = "<group>"; };
+		B24E1ECE1BB89ED600E5A4B6 /* tochio.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tochio.jpeg; path = ../../../Downloads/tochio.jpeg; sourceTree = "<group>"; };
 		B27DA5C21B8C3CE400A20569 /* Nomiaruki_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nomiaruki_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27DA5C61B8C3CE400A20569 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B27DA5C71B8C3CE400A20569 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		B27DA5C41B8C3CE400A20569 /* Nomiaruki_App */ = {
 			isa = PBXGroup;
 			children = (
+				B24E1ECE1BB89ED600E5A4B6 /* tochio.jpeg */,
 				B27DA5C71B8C3CE400A20569 /* AppDelegate.swift */,
 				E736401E1BA848DF006B0368 /* ThirdViewController.swift */,
 				E736401A1BA84718006B0368 /* FirstViewController.swift */,
@@ -216,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B27DA5CD1B8C3CE400A20569 /* Main.storyboard in Resources */,
+				B24E1ECF1BB89ED600E5A4B6 /* tochio.jpeg in Resources */,
 				B27DA5D21B8C3CE400A20569 /* LaunchScreen.xib in Resources */,
 				B27DA5CF1B8C3CE400A20569 /* Images.xcassets in Resources */,
 			);

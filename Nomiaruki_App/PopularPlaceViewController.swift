@@ -108,8 +108,8 @@ class PopularPlaceViewController: UIViewController,UITableViewDelegate, UITableV
         
         if num2%2 == 0{
             //背景画像の設定
-            //let backgroundImage: UIImage = UIImage(named:"tochio.jpeg")!
-            //cell.backgroundView = UIImageView(image: backgroundImage)
+            let backgroundImage: UIImage = UIImage(named:"tochio.jpeg")!
+            cell.backgroundView = UIImageView(image: backgroundImage)
         }else{
             // Cellに値を設定する.
             cell.textLabel!.text = "\(myItems[indexPath.row])"
