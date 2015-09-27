@@ -113,7 +113,7 @@ class PopularSakeViewController: UIViewController,UITableViewDelegate, UITableVi
         }else{
             // Cellに値を設定する.
             cell.textLabel!.text = "\(myItems[indexPath.row])"
-            cell.textLabel!.font = UIFont.boldSystemFontOfSize(25)
+            cell.textLabel!.font = UIFont.boldSystemFontOfSize(18)
         }
         
         //セル選択時になにも起きないようにする
