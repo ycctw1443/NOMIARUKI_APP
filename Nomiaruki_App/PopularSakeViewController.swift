@@ -8,7 +8,12 @@
 
 import UIKit
 
-class PopularSakeViewController: UIViewController {
+class PopularSakeViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+    
+    // Tableで使用する配列を設定する
+    private let myItems: NSArray = ["","さきイカ","","貝柱", "","刺し身"]
+    private var myTableView: UITableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,13 +50,78 @@ class PopularSakeViewController: UIViewController {
         //
         //テーブルの生成
         //
-        // Tableで使用する配列を設定する
-        private let myItems: NSArray = ["さきイカ","貝柱", ""]
-        private var myTableView: UITableView!
+        // Status Barの高さを取得する.
+        let barHeight: CGFloat = UIApplication.sharedApplication().statusBarFrame.size.height
         
+        // Viewの高さと幅を取得する.
+        let displayWidth: CGFloat = self.view.frame.width
+        let displayHeight: CGFloat = self.view.frame.height
+        
+        
+        // TableViewの生成する(status barの高さ分ずらして表示).
+        myTableView = UITableView(frame: CGRect(x: 0, y: barHeight+50, width: displayWidth, height: displayHeight - barHeight - 50))
+        
+        // Cell名の登録をおこなう.
+        myTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
+        
+        // DataSourceの設定をする.
+        myTableView.dataSource = self
+        
+        // Delegateを設定する.
+        myTableView.delegate = self
+        
+        // Viewに追加する.
+        self.view.addSubview(myTableView)
         
         
     }
+    
+    /*
+    Cellの総数を返すデータソースメソッド.
+    (実装必須)
+    */
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return myItems.count
+    }
+    
+    /*
+    Cellの1行のサイズを変更
+    */
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        let num = indexPath.row
+        if num%2 == 0{
+            return 210
+        }
+        return 35
+    }
+    
+    /*
+    Cellに値を設定するデータソースメソッド.
+    (実装必須)
+    */
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        // 再利用するCellを取得する.
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyCell")
+        
+        let num2 = indexPath.row
+        
+        if num2%2 == 0{
+            //背景画像の設定
+            //let backgroundImage: UIImage = UIImage(named:"tochio.jpeg")!
+            //cell.backgroundView = UIImageView(image: backgroundImage)
+        }else{
+            // Cellに値を設定する.
+            cell.textLabel!.text = "\(myItems[indexPath.row])"
+            cell.textLabel!.font = UIFont.boldSystemFontOfSize(25)
+        }
+        
+        //セル選択時になにも起きないようにする
+        cell.selectionStyle = .None
+        
+        return cell
+    }
+
     
     /*
     ボタンイベント.
