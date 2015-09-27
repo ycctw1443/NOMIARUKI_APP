@@ -36,7 +36,7 @@ class PopularSakeViewController: UIViewController,UITableViewDelegate, UITableVi
         // Labelを作成.
         let myLabel: UILabel = UILabel(frame: CGRectMake(0,0,200,50))
         // Labelに文字を代入.
-        myLabel.text = "おすすめ食べ合わせ"
+        myLabel.text = "おすすめの料理"
         // 文字の色を白にする.
         myLabel.textColor = UIColor.blackColor()
         // Textを中央寄せにする.
