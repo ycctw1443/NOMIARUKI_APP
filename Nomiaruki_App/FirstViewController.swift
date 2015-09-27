@@ -165,10 +165,10 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
         cell.detailTextLabel?.text = "\(myItems2[indexPath.row])"
         
         //背景画像の設定
-        //cell.backgroundColor = UIColor(patternImage: UIImage(named: "tochio.jpg")!)
-        let myImage = UIImage(named: "tochio.jpeg")
-        cell.imageView?.image = myImage
-        
+        var backgroundImage: UIImage = UIImage(named:"tochio.jpeg")!
+        cell.backgroundView = UIImageView(image: backgroundImage)
+        //let myImage = UIImage(named: "tochio.jpeg")
+        //cell.imageView?.image = myImage
         
         return cell
     }
