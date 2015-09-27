@@ -144,7 +144,12 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
         
         // Cellに値を設定する.
         cell.textLabel!.text = "\(myItems[indexPath.row])"
-        cell.detailTextLabel?.text = "\(myItems2[indexPath.row])"
+        cell.textLabel!.textColor = UIColor.whiteColor()
+        cell.textLabel!.font = UIFont.boldSystemFontOfSize(25)
+        
+        cell.detailTextLabel!.text = "\(myItems2[indexPath.row])"
+        cell.detailTextLabel!.textColor = UIColor.whiteColor()
+        cell.detailTextLabel!.font = UIFont.boldSystemFontOfSize(14)
         
         //背景画像の設定
         var backgroundImage: UIImage = UIImage(named:"tochio.jpeg")!
