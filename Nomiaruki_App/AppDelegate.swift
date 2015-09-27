@@ -34,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         myTabBarController = UITabBarController()
         
         // ViewControllerを設定する.
+        //xcode7になったため、UIViewControllerに変更
         myTabBarController?.setViewControllers(myTabs as! [UIViewController], animated: false)
         
         // RootViewControllerに設定する.
