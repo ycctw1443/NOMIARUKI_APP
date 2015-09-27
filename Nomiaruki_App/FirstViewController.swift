@@ -170,14 +170,31 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
     Cellが選択された時の動作
     */
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        // 遷移するViewを定義する.
-        let myPopularSakeViewController: UIViewController = PopularSakeViewController()
         
-        // アニメーションを設定する.
-        myPopularSakeViewController.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+        var num = indexPath.row
         
-        // Viewの移動する.
-        self.presentViewController(myPopularSakeViewController, animated: true, completion: nil)
+        switch num{
+        
+        case 0:
+            //人気の酒を選択した場合の画面遷移
+            // 遷移するViewを定義する.
+            let myPopularSakeViewController: UIViewController = PopularSakeViewController()
+            
+            // アニメーションを設定する.
+            myPopularSakeViewController.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+            
+            // Viewの移動する.
+            self.presentViewController(myPopularSakeViewController, animated: true, completion: nil)
+            
+        case 1:
+            break
+        case 2:
+            break
+        default:
+            break
+        }
+        
+
     }
     
 }
