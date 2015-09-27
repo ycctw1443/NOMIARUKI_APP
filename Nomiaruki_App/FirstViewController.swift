@@ -166,4 +166,18 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
         return cell
     }
     
+    /*
+    Cellが選択された時の動作
+    */
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        // 遷移するViewを定義する.
+        let myPopularSakeViewController: UIViewController = PopularSakeViewController()
+        
+        // アニメーションを設定する.
+        myPopularSakeViewController.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+        
+        // Viewの移動する.
+        self.presentViewController(myPopularSakeViewController, animated: true, completion: nil)
+    }
+    
 }
