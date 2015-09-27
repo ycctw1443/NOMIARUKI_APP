@@ -11,7 +11,8 @@ import UIKit
 class PopularSakeViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     // Tableで使用する配列を設定する
-    private let myItems: NSArray = ["","さきイカ","","貝柱", "","刺し身"]
+    private let myItems: NSArray = ["","さきイカ","","フルーツポンチ", "","刺し身"]
+    private let myItems2: NSArray = ["","★★★★","","★★★", "","★★★★★"]
     private var myTableView: UITableView!
     
     
@@ -92,7 +93,7 @@ class PopularSakeViewController: UIViewController,UITableViewDelegate, UITableVi
         if num%2 == 0{
             return 210
         }
-        return 35
+        return 45
     }
     
     /*
@@ -114,6 +115,10 @@ class PopularSakeViewController: UIViewController,UITableViewDelegate, UITableVi
             // Cellに値を設定する.
             cell.textLabel!.text = "\(myItems[indexPath.row])"
             cell.textLabel!.font = UIFont.boldSystemFontOfSize(18)
+            
+            cell.detailTextLabel!.text = "\(myItems2[indexPath.row])"
+            cell.detailTextLabel!.textColor = UIColor.orangeColor()
+            cell.detailTextLabel!.font = UIFont.boldSystemFontOfSize(12)
         }
         
         //セル選択時になにも起きないようにする
