@@ -29,8 +29,8 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
     private var mySearchBar: UISearchBar!
     
     // Tableで使用する配列を設定する
-    private let myItems: NSArray = ["久保田", "吉野川","栃尾の油揚げ", "長岡技大第三食堂"]
-    private let myItems2: NSArray = ["人気の日本酒", "人気の日本酒","人気の料理", "人気の店"]
+    private let myItems: NSArray = ["久保田","栃尾の油揚げ", "長岡技大第三食堂"]
+    private let myItems2: NSArray = ["人気の日本酒","人気の料理", "人気の店"]
     private var myTableView: UITableView!
     
     
@@ -171,7 +171,7 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
         switch num{
         
         case 0:
-            //人気の日本酒を選択した場合の画面遷移
+            //一番上の項目を選択した場合の画面遷移
             // 遷移するViewを定義する.
             let myPopularViewController: UIViewController = PopularSakeViewController()
             // アニメーションを設定する.
@@ -180,7 +180,7 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
             self.presentViewController(myPopularViewController, animated: true, completion: nil)
             
         case 1:
-            //人気の料理を選択した場合の画面遷移
+            //二番目を選択した場合の画面遷移
             // 遷移するViewを定義する.
             let myPopularViewController: UIViewController = PopularFoodViewController()
             // アニメーションを設定する.
@@ -189,7 +189,7 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
             self.presentViewController(myPopularViewController, animated: true, completion: nil)
             
         case 2:
-            //人気の店を選択した場合の画面遷移
+            //三番目を選択した場合の画面遷移
             // 遷移するViewを定義する.
             let myPopularViewController: UIViewController = PopularPlaceViewController()
             // アニメーションを設定する.
