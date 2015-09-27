@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B21F534C1BA8737600B11509 /* kubota.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B21F534B1BA8737600B11509 /* kubota.jpg */; };
 		B228EE111BB7D2C4001EE0C2 /* PopularFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B228EE101BB7D2C4001EE0C2 /* PopularFoodViewController.swift */; };
 		B228EE131BB7D2F2001EE0C2 /* PopularPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B228EE121BB7D2F2001EE0C2 /* PopularPlaceViewController.swift */; };
-		B228EE151BB841D1001EE0C2 /* tochio.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B228EE141BB841D1001EE0C2 /* tochio.jpeg */; };
 		B27DA5C81B8C3CE400A20569 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27DA5C71B8C3CE400A20569 /* AppDelegate.swift */; };
 		B27DA5CA1B8C3CE400A20569 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27DA5C91B8C3CE400A20569 /* ViewController.swift */; };
 		B27DA5CD1B8C3CE400A20569 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27DA5CB1B8C3CE400A20569 /* Main.storyboard */; };
@@ -21,6 +19,8 @@
 		E736401D1BA84737006B0368 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736401C1BA84737006B0368 /* SecondViewController.swift */; };
 		E736401F1BA848DF006B0368 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736401E1BA848DF006B0368 /* ThirdViewController.swift */; };
 		E73640271BA85867006B0368 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73640261BA85867006B0368 /* FourthViewController.swift */; };
+		E75726B71BB87F1100BCFA03 /* tochio.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = E75726B61BB87F1100BCFA03 /* tochio.jpeg */; settings = {ASSET_TAGS = (); }; };
+		E75726B91BB87F1900BCFA03 /* kubota.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E75726B81BB87F1900BCFA03 /* kubota.jpg */; settings = {ASSET_TAGS = (); }; };
 		E7BFC4D81BA871C2000069EB /* PopularSakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BFC4D71BA871C2000069EB /* PopularSakeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,10 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B21F534B1BA8737600B11509 /* kubota.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = kubota.jpg; path = ../../../Downloads/kubota.jpg; sourceTree = "<group>"; };
 		B228EE101BB7D2C4001EE0C2 /* PopularFoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularFoodViewController.swift; sourceTree = "<group>"; };
 		B228EE121BB7D2F2001EE0C2 /* PopularPlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularPlaceViewController.swift; sourceTree = "<group>"; };
-		B228EE141BB841D1001EE0C2 /* tochio.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tochio.jpeg; path = ../../../Downloads/tochio.jpeg; sourceTree = "<group>"; };
 		B27DA5C21B8C3CE400A20569 /* Nomiaruki_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nomiaruki_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27DA5C61B8C3CE400A20569 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B27DA5C71B8C3CE400A20569 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +51,8 @@
 		E736401C1BA84737006B0368 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		E736401E1BA848DF006B0368 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		E73640261BA85867006B0368 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		E75726B61BB87F1100BCFA03 /* tochio.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tochio.jpeg; path = ../../../Pictures/tochio.jpeg; sourceTree = "<group>"; };
+		E75726B81BB87F1900BCFA03 /* kubota.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = kubota.jpg; path = ../../../Pictures/kubota.jpg; sourceTree = "<group>"; };
 		E7BFC4D71BA871C2000069EB /* PopularSakeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularSakeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,8 +95,6 @@
 		B27DA5C41B8C3CE400A20569 /* Nomiaruki_App */ = {
 			isa = PBXGroup;
 			children = (
-				B228EE141BB841D1001EE0C2 /* tochio.jpeg */,
-				B21F534B1BA8737600B11509 /* kubota.jpg */,
 				B27DA5C71B8C3CE400A20569 /* AppDelegate.swift */,
 				E736401E1BA848DF006B0368 /* ThirdViewController.swift */,
 				E736401A1BA84718006B0368 /* FirstViewController.swift */,
@@ -107,8 +105,10 @@
 				E736401C1BA84737006B0368 /* SecondViewController.swift */,
 				B27DA5C91B8C3CE400A20569 /* ViewController.swift */,
 				B27DA5CB1B8C3CE400A20569 /* Main.storyboard */,
+				E75726B81BB87F1900BCFA03 /* kubota.jpg */,
 				B27DA5CE1B8C3CE400A20569 /* Images.xcassets */,
 				B27DA5D01B8C3CE400A20569 /* LaunchScreen.xib */,
+				E75726B61BB87F1100BCFA03 /* tochio.jpeg */,
 				B27DA5C51B8C3CE400A20569 /* Supporting Files */,
 			);
 			path = Nomiaruki_App;
@@ -221,11 +221,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E75726B91BB87F1900BCFA03 /* kubota.jpg in Resources */,
 				B27DA5CD1B8C3CE400A20569 /* Main.storyboard in Resources */,
+				E75726B71BB87F1100BCFA03 /* tochio.jpeg in Resources */,
 				B27DA5D21B8C3CE400A20569 /* LaunchScreen.xib in Resources */,
-				B228EE151BB841D1001EE0C2 /* tochio.jpeg in Resources */,
 				B27DA5CF1B8C3CE400A20569 /* Images.xcassets in Resources */,
-				B21F534C1BA8737600B11509 /* kubota.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
