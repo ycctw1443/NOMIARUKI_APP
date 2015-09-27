@@ -152,11 +152,11 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
         cell.detailTextLabel!.font = UIFont.boldSystemFontOfSize(14)
         
         //背景画像の設定
-        let backgroundImage: UIImage = UIImage(named:"tochio.jpeg")!
-        cell.backgroundView = UIImageView(image: backgroundImage)
+        //let backgroundImage: UIImage = UIImage(named:"tochio.jpeg")!
+        //cell.backgroundView = UIImageView(image: backgroundImage)
         
         //セル選択時にセルが灰色になるのを防ぐ
-        cell.selectedBackgroundView = UIImageView(image: backgroundImage)
+        //cell.selectedBackgroundView = UIImageView(image: backgroundImage)
         
         return cell
     }
