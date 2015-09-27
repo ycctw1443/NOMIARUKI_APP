@@ -148,7 +148,7 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
     Cellの1行のサイズを変更
     */
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 100
+        return 150
     }
     
     /*
@@ -167,8 +167,9 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
         //背景画像の設定
         var backgroundImage: UIImage = UIImage(named:"tochio.jpeg")!
         cell.backgroundView = UIImageView(image: backgroundImage)
-        //let myImage = UIImage(named: "tochio.jpeg")
-        //cell.imageView?.image = myImage
+        
+        //セル選択時にセルが灰色になるので、画像を上書き
+        cell.selectedBackgroundView = UIImageView(image: backgroundImage)
         
         return cell
     }
