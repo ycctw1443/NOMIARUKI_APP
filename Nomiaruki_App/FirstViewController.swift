@@ -130,7 +130,7 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
     Cellの1行のサイズを変更
     */
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 190
+        return 210
     }
     
     /*
