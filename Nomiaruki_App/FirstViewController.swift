@@ -29,38 +29,51 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
     private var mySearchBar: UISearchBar!
     
     // Tableで使用する配列を設定する
-    private let myItems: NSArray = ["久保田", "栃尾の油揚げ", "長岡技大第三食堂"]
-    private let myItems2: NSArray = ["人気の日本酒", "人気の料理", "人気の店"]
+    private let myItems: NSArray = ["久保田", "吉野川","栃尾の油揚げ", "長岡技大第三食堂"]
+    private let myItems2: NSArray = ["人気の日本酒", "人気の日本酒","人気の料理", "人気の店"]
     private var myTableView: UITableView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /*
+        テーブルの生成
+        */
+        // Status Barの高さを取得する.
+        let barHeight: CGFloat = UIApplication.sharedApplication().statusBarFrame.size.height
         
-        // ロゴLabelを作成.
-        let myLogoLabel: UILabel = UILabel(frame: CGRectMake(0,0,200,50))
+        // Viewの高さと幅を取得する.
+        let displayWidth: CGFloat = self.view.frame.width
+        let displayHeight: CGFloat = self.view.frame.height
         
-        // 枠を丸くする.
-        myLogoLabel.layer.masksToBounds = true
         
-        // コーナーの半径.
-        myLogoLabel.layer.cornerRadius = 20.0
+        // TableViewの生成する(status barの高さ分ずらして表示).
+        myTableView = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight - barHeight - 50))
         
-        // ロゴLabelに文字を代入.
-        myLogoLabel.text = "食べ合わせアプリ"
+        // Cell名の登録をおこなう.
+        myTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
         
-        // 文字の色を白にする.
-        myLogoLabel.textColor = UIColor.whiteColor()
+        // DataSourceの設定をする.
+        myTableView.dataSource = self
         
-        // Textを中央寄せにする.
-        myLogoLabel.textAlignment = NSTextAlignment.Center
+        // Delegateを設定する.
+        myTableView.delegate = self
         
+        // Viewに追加する.
+        self.view.addSubview(myTableView)
+        
+        
+        /*
+        検索バーの生成
+        */
         // 検索バーを作成する.
         mySearchBar = UISearchBar()
         mySearchBar.delegate = self
-        mySearchBar.frame = CGRectMake(0, 0, 300, 80)
-        mySearchBar.layer.position = CGPoint(x: self.view.bounds.width/2, y: 100)
+        mySearchBar.frame = CGRectMake(0, 0, 300, 40)
+        mySearchBar.layer.position = CGPoint(x: self.view.bounds.width/2, y: 50)
+        mySearchBar.backgroundColor = UIColor.whiteColor()
+        mySearchBar.layer.masksToBounds = true
         
         // キャンセルボタンを有効にする.
         mySearchBar.showsCancelButton = true
@@ -82,37 +95,6 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
         
         // 検索バーをViewに追加する.
         self.view.addSubview(mySearchBar)
-        
-        // Status Barの高さを取得する.
-        let barHeight: CGFloat = UIApplication.sharedApplication().statusBarFrame.size.height
-        
-        // Viewの高さと幅を取得する.
-        let displayWidth: CGFloat = self.view.frame.width
-        let displayHeight: CGFloat = self.view.frame.height
-        
-        // 配置する座標を設定する.
-        myLogoLabel.layer.position = CGPoint(x: self.view.bounds.width/2,y: barHeight + 30)
-        
-        // ロゴの背景色を設定する。
-        myLogoLabel.backgroundColor = UIColor.blueColor()
-        
-        // ViewにロゴLabelを追加.
-        self.view.addSubview(myLogoLabel)
-        
-        // TableViewの生成する(status barの高さ分ずらして表示).
-        myTableView = UITableView(frame: CGRect(x: 0, y: barHeight + 100, width: displayWidth, height: displayHeight - barHeight))
-        
-        // Cell名の登録をおこなう.
-        myTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
-        
-        // DataSourceの設定をする.
-        myTableView.dataSource = self
-        
-        // Delegateを設定する.
-        myTableView.delegate = self
-        
-        // Viewに追加する.
-        self.view.addSubview(myTableView)
 
         }
     
@@ -148,7 +130,7 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
     Cellの1行のサイズを変更
     */
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 150
+        return 190
     }
     
     /*
@@ -168,7 +150,7 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
         var backgroundImage: UIImage = UIImage(named:"tochio.jpeg")!
         cell.backgroundView = UIImageView(image: backgroundImage)
         
-        //セル選択時にセルが灰色になるので、画像を上書き
+        //セル選択時にセルが灰色になるのを防ぐ
         cell.selectedBackgroundView = UIImageView(image: backgroundImage)
         
         return cell
