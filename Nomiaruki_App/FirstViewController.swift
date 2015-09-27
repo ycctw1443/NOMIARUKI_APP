@@ -14,8 +14,8 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
         // Viewの背景色をWhiteに設定する.
         self.view.backgroundColor = UIColor.whiteColor()
         
-        //tabBarItemのアイコンをSearchに、タグを1と定義する.
-        self.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.Search, tag: 1)
+        //tabBarItemのアイコンを「人気」に、タグを1と定義する.
+        self.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.MostViewed, tag: 1)
     }
     
     required init(coder aDecoder: NSCoder) {
