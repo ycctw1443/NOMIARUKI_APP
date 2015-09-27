@@ -18,7 +18,7 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
         self.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.MostViewed, tag: 1)
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -152,7 +152,7 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
         cell.detailTextLabel!.font = UIFont.boldSystemFontOfSize(14)
         
         //背景画像の設定
-        var backgroundImage: UIImage = UIImage(named:"tochio.jpeg")!
+        let backgroundImage: UIImage = UIImage(named:"tochio.jpeg")!
         cell.backgroundView = UIImageView(image: backgroundImage)
         
         //セル選択時にセルが灰色になるのを防ぐ
@@ -166,7 +166,7 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
     */
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        var num = indexPath.row
+        let num = indexPath.row
         
         switch num{
         
