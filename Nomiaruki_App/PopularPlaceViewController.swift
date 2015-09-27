@@ -31,15 +31,7 @@ class PopularPlaceViewController: UIViewController {
     ボタンイベント.
     */
     internal func onClickMyButton(sender: UIButton){
-        
-        // 遷移するViewを定義.
-        let myViewController: UIViewController = FirstViewController()
-        
-        // アニメーションを設定.
-        myViewController.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
-        
-        // Viewの移動.
-        self.presentViewController(myViewController, animated: true, completion: nil)
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
