@@ -21,6 +21,13 @@
 		E736401D1BA84737006B0368 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736401C1BA84737006B0368 /* SecondViewController.swift */; };
 		E736401F1BA848DF006B0368 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736401E1BA848DF006B0368 /* ThirdViewController.swift */; };
 		E73640271BA85867006B0368 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73640261BA85867006B0368 /* FourthViewController.swift */; };
+		E753A58F1BB8ED7B00232C5E /* RAMBounceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E753A5841BB8ED7A00232C5E /* RAMBounceAnimation.swift */; settings = {ASSET_TAGS = (); }; };
+		E753A5901BB8ED7B00232C5E /* RAMFrameItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E753A5861BB8ED7A00232C5E /* RAMFrameItemAnimation.swift */; settings = {ASSET_TAGS = (); }; };
+		E753A5911BB8ED7B00232C5E /* RAMFumeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E753A5881BB8ED7B00232C5E /* RAMFumeAnimation.swift */; settings = {ASSET_TAGS = (); }; };
+		E753A5921BB8ED7B00232C5E /* RAMRotationAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E753A58A1BB8ED7B00232C5E /* RAMRotationAnimation.swift */; settings = {ASSET_TAGS = (); }; };
+		E753A5931BB8ED7B00232C5E /* RAMTransitionItemAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E753A58C1BB8ED7B00232C5E /* RAMTransitionItemAnimation.swift */; settings = {ASSET_TAGS = (); }; };
+		E753A5941BB8ED7B00232C5E /* RAMAnimatedTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E753A58D1BB8ED7B00232C5E /* RAMAnimatedTabBarController.swift */; settings = {ASSET_TAGS = (); }; };
+		E753A5951BB8ED7B00232C5E /* RAMItemAnimationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E753A58E1BB8ED7B00232C5E /* RAMItemAnimationProtocol.swift */; settings = {ASSET_TAGS = (); }; };
 		E7BFC4D81BA871C2000069EB /* PopularSakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BFC4D71BA871C2000069EB /* PopularSakeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +63,13 @@
 		E736401E1BA848DF006B0368 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		E73640261BA85867006B0368 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		E753A57C1BB8E57200232C5E /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		E753A5841BB8ED7A00232C5E /* RAMBounceAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMBounceAnimation.swift; sourceTree = "<group>"; };
+		E753A5861BB8ED7A00232C5E /* RAMFrameItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMFrameItemAnimation.swift; sourceTree = "<group>"; };
+		E753A5881BB8ED7B00232C5E /* RAMFumeAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMFumeAnimation.swift; sourceTree = "<group>"; };
+		E753A58A1BB8ED7B00232C5E /* RAMRotationAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMRotationAnimation.swift; sourceTree = "<group>"; };
+		E753A58C1BB8ED7B00232C5E /* RAMTransitionItemAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMTransitionItemAnimation.swift; sourceTree = "<group>"; };
+		E753A58D1BB8ED7B00232C5E /* RAMAnimatedTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMAnimatedTabBarController.swift; sourceTree = "<group>"; };
+		E753A58E1BB8ED7B00232C5E /* RAMItemAnimationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAMItemAnimationProtocol.swift; sourceTree = "<group>"; };
 		E7BFC4D71BA871C2000069EB /* PopularSakeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularSakeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +132,7 @@
 		B27DA5C41B8C3CE400A20569 /* Nomiaruki_App */ = {
 			isa = PBXGroup;
 			children = (
+				E753A5811BB8ED7A00232C5E /* RAMAnimatedTabBarController */,
 				B24E1ECE1BB89ED600E5A4B6 /* tochio.jpeg */,
 				B27DA5C71B8C3CE400A20569 /* AppDelegate.swift */,
 				E736401E1BA848DF006B0368 /* ThirdViewController.swift */,
@@ -160,6 +175,68 @@
 				B27DA5DC1B8C3CE500A20569 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E753A5811BB8ED7A00232C5E /* RAMAnimatedTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				E753A5821BB8ED7A00232C5E /* Animations */,
+				E753A58D1BB8ED7B00232C5E /* RAMAnimatedTabBarController.swift */,
+				E753A58E1BB8ED7B00232C5E /* RAMItemAnimationProtocol.swift */,
+			);
+			path = RAMAnimatedTabBarController;
+			sourceTree = "<group>";
+		};
+		E753A5821BB8ED7A00232C5E /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				E753A5831BB8ED7A00232C5E /* BounceAnimation */,
+				E753A5851BB8ED7A00232C5E /* FrameAnimation */,
+				E753A5871BB8ED7A00232C5E /* FumeAnimation */,
+				E753A5891BB8ED7B00232C5E /* RotationAnimation */,
+				E753A58B1BB8ED7B00232C5E /* TransitionAniamtions */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		E753A5831BB8ED7A00232C5E /* BounceAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				E753A5841BB8ED7A00232C5E /* RAMBounceAnimation.swift */,
+			);
+			path = BounceAnimation;
+			sourceTree = "<group>";
+		};
+		E753A5851BB8ED7A00232C5E /* FrameAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				E753A5861BB8ED7A00232C5E /* RAMFrameItemAnimation.swift */,
+			);
+			path = FrameAnimation;
+			sourceTree = "<group>";
+		};
+		E753A5871BB8ED7A00232C5E /* FumeAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				E753A5881BB8ED7B00232C5E /* RAMFumeAnimation.swift */,
+			);
+			path = FumeAnimation;
+			sourceTree = "<group>";
+		};
+		E753A5891BB8ED7B00232C5E /* RotationAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				E753A58A1BB8ED7B00232C5E /* RAMRotationAnimation.swift */,
+			);
+			path = RotationAnimation;
+			sourceTree = "<group>";
+		};
+		E753A58B1BB8ED7B00232C5E /* TransitionAniamtions */ = {
+			isa = PBXGroup;
+			children = (
+				E753A58C1BB8ED7B00232C5E /* RAMTransitionItemAnimation.swift */,
+			);
+			path = TransitionAniamtions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +377,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E753A5901BB8ED7B00232C5E /* RAMFrameItemAnimation.swift in Sources */,
+				E753A5941BB8ED7B00232C5E /* RAMAnimatedTabBarController.swift in Sources */,
 				E7BFC4D81BA871C2000069EB /* PopularSakeViewController.swift in Sources */,
 				E736401D1BA84737006B0368 /* SecondViewController.swift in Sources */,
 				E736401B1BA84718006B0368 /* FirstViewController.swift in Sources */,
@@ -307,7 +386,12 @@
 				B228EE111BB7D2C4001EE0C2 /* PopularFoodViewController.swift in Sources */,
 				E73640271BA85867006B0368 /* FourthViewController.swift in Sources */,
 				B228EE131BB7D2F2001EE0C2 /* PopularPlaceViewController.swift in Sources */,
+				E753A58F1BB8ED7B00232C5E /* RAMBounceAnimation.swift in Sources */,
+				E753A5951BB8ED7B00232C5E /* RAMItemAnimationProtocol.swift in Sources */,
 				B27DA5CA1B8C3CE400A20569 /* ViewController.swift in Sources */,
+				E753A5931BB8ED7B00232C5E /* RAMTransitionItemAnimation.swift in Sources */,
+				E753A5911BB8ED7B00232C5E /* RAMFumeAnimation.swift in Sources */,
+				E753A5921BB8ED7B00232C5E /* RAMRotationAnimation.swift in Sources */,
 				B27DA5C81B8C3CE400A20569 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
