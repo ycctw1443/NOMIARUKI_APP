@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8DCD9DCA7E186E6D6E3E4734 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 58667B152B86E5A8B18C7350 /* libPods.a */; };
 		B228EE111BB7D2C4001EE0C2 /* PopularFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B228EE101BB7D2C4001EE0C2 /* PopularFoodViewController.swift */; };
 		B228EE131BB7D2F2001EE0C2 /* PopularPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B228EE121BB7D2F2001EE0C2 /* PopularPlaceViewController.swift */; };
 		B24E1ECF1BB89ED600E5A4B6 /* tochio.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B24E1ECE1BB89ED600E5A4B6 /* tochio.jpeg */; settings = {ASSET_TAGS = (); }; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		58667B152B86E5A8B18C7350 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0519420F48334D6F14DE5BF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		B228EE101BB7D2C4001EE0C2 /* PopularFoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularFoodViewController.swift; sourceTree = "<group>"; };
 		B228EE121BB7D2F2001EE0C2 /* PopularPlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularPlaceViewController.swift; sourceTree = "<group>"; };
 		B24E1ECE1BB89ED600E5A4B6 /* tochio.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tochio.jpeg; path = ../../../Downloads/tochio.jpeg; sourceTree = "<group>"; };
@@ -47,10 +50,12 @@
 		B27DA5D71B8C3CE500A20569 /* Nomiaruki_AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Nomiaruki_AppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27DA5DC1B8C3CE500A20569 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B27DA5DD1B8C3CE500A20569 /* Nomiaruki_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nomiaruki_AppTests.swift; sourceTree = "<group>"; };
+		C574A135F351139856F954DD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E736401A1BA84718006B0368 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		E736401C1BA84737006B0368 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		E736401E1BA848DF006B0368 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		E73640261BA85867006B0368 /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		E753A57C1BB8E57200232C5E /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		E7BFC4D71BA871C2000069EB /* PopularSakeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularSakeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DCD9DCA7E186E6D6E3E4734 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +78,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A81CD1B05258AE7511B615BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58667B152B86E5A8B18C7350 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AB834F983D3FA4733E66643A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A0519420F48334D6F14DE5BF /* Pods.debug.xcconfig */,
+				C574A135F351139856F954DD /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B27DA5B91B8C3CE400A20569 = {
 			isa = PBXGroup;
 			children = (
 				B27DA5C41B8C3CE400A20569 /* Nomiaruki_App */,
 				B27DA5DA1B8C3CE500A20569 /* Nomiaruki_AppTests */,
 				B27DA5C31B8C3CE400A20569 /* Products */,
+				AB834F983D3FA4733E66643A /* Pods */,
+				A81CD1B05258AE7511B615BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +121,7 @@
 				B24E1ECE1BB89ED600E5A4B6 /* tochio.jpeg */,
 				B27DA5C71B8C3CE400A20569 /* AppDelegate.swift */,
 				E736401E1BA848DF006B0368 /* ThirdViewController.swift */,
+				E753A57C1BB8E57200232C5E /* Bridging-Header.h */,
 				E736401A1BA84718006B0368 /* FirstViewController.swift */,
 				E7BFC4D71BA871C2000069EB /* PopularSakeViewController.swift */,
 				B228EE101BB7D2C4001EE0C2 /* PopularFoodViewController.swift */,
@@ -143,9 +169,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B27DA5E11B8C3CE500A20569 /* Build configuration list for PBXNativeTarget "Nomiaruki_App" */;
 			buildPhases = (
+				3D83A20F864A6C113E27C888 /* Check Pods Manifest.lock */,
 				B27DA5BE1B8C3CE400A20569 /* Sources */,
 				B27DA5BF1B8C3CE400A20569 /* Frameworks */,
 				B27DA5C01B8C3CE400A20569 /* Resources */,
+				66F958C37EF6B16E8A1436FC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,6 +261,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3D83A20F864A6C113E27C888 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		66F958C37EF6B16E8A1436FC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B27DA5BE1B8C3CE400A20569 /* Sources */ = {
@@ -372,21 +433,25 @@
 		};
 		B27DA5E21B8C3CE500A20569 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0519420F48334D6F14DE5BF /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Nomiaruki_App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Nomiaruki_App/Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		B27DA5E31B8C3CE500A20569 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C574A135F351139856F954DD /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Nomiaruki_App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Nomiaruki_App/Bridging-Header.h";
 			};
 			name = Release;
 		};
