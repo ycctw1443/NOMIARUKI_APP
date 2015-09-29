@@ -80,7 +80,7 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell : UICollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("MyCell",
-            forIndexPath: indexPath) 
+            forIndexPath: indexPath)
         
         cell.backgroundColor = UIColor.orangeColor()
         return cell
