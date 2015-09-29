@@ -100,7 +100,7 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
         return 3
     }
     
-    
+    //セルのサイズを条件によって変更する
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         if indexPath.row % 2 != 0 {
             return CGSizeMake(40, 40)
