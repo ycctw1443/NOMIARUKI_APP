@@ -26,7 +26,6 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
-    
     var myCollectionView : UICollectionView!
     
     override func viewDidLoad() {
@@ -42,18 +41,27 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
         layout.sectionInset = UIEdgeInsetsMake(16, 16, 32, 16)
         
         // セクション毎のヘッダーサイズ.
-        layout.headerReferenceSize = CGSizeMake(100,30)
+        layout.headerReferenceSize = CGSizeMake(100,50)
         
         // CollectionViewを生成.
         myCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         
         // Cellに使われるクラスを登録.
-        myCollectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "MyCell")
+        myCollectionView.registerClass(CustomUICollectionViewCell.self, forCellWithReuseIdentifier: "MyCell")
+        myCollectionView.registerClass(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "Section")
         
         myCollectionView.delegate = self
         myCollectionView.dataSource = self
         
         self.view.addSubview(myCollectionView)
+        
+    }
+    
+    /*
+    Sectionの数
+    */
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 3
     }
     
     /*
@@ -62,7 +70,7 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
         print("Num: \(indexPath.row)")
-        print("Value:\(collectionView)")
+        print("SectionNum:\(indexPath.section)")
         
     }
     
@@ -70,7 +78,35 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
     Cellの総数を返す
     */
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
+        
+        // Section毎にCellの総数を変える.
+        switch(section){
+        case 0:
+            return 5
+            
+        case 1:
+            return 8
+            
+        case 2:
+            return 20
+            
+        default:
+            print("error")
+            return 0
+        }
+        
+    }
+    
+    /*
+    Sectionに値を設定する
+    */
+    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+        
+        let headerView = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: "Section", forIndexPath: indexPath) 
+        
+        headerView.backgroundColor = UIColor.whiteColor()
+        
+        return headerView
     }
     
     /*
@@ -78,10 +114,27 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
     */
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
-        let cell : UICollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("MyCell",
-            forIndexPath: indexPath)
+        let cell : CustomUICollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("MyCell", forIndexPath: indexPath) as! CustomUICollectionViewCell
         
-        cell.backgroundColor = UIColor.orangeColor()
+        // Section毎にCellのプロパティを変える.
+        switch(indexPath.section){
+        case 0:
+            cell.backgroundColor = UIColor.redColor()
+            cell.textLabel?.text = "0"
+            
+        case 1:
+            cell.backgroundColor = UIColor.greenColor()
+            cell.textLabel?.text = "1"
+            
+        case 2:
+            cell.backgroundColor = UIColor.blueColor()
+            cell.textLabel?.text = "2"
+            
+        default:
+            print("section error")
+            cell.backgroundColor = UIColor.whiteColor()
+        }
+        
         return cell
     }
     
