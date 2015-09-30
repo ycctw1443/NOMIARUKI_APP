@@ -83,16 +83,6 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     /*
-    Cellが選択された際に呼び出される
-    */
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
-        print("Num: \(indexPath.row)")
-        print("SectionNum:\(indexPath.section)")
-        
-    }
-    
-    /*
     Cellの総数を返す
     */
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -140,6 +130,23 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         return cell
     }
+    
+    /*
+    Cellが選択された時の動作
+    */
+    /*
+    Cellが選択された際に呼び出される
+    */
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
+        let myPlaceViewController: UIViewController = PlaceViewController()
+        // アニメーションを設定する.
+        myPlaceViewController.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+        // Viewの移動する.
+        self.presentViewController(myPlaceViewController, animated: true, completion: nil)
+        
+    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

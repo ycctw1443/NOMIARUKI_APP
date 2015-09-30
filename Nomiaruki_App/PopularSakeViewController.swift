@@ -139,7 +139,6 @@ class PopularSakeViewController: UIViewController,UITableViewDelegate, UITableVi
             myPopularViewController.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
             // Viewの移動する.
             self.presentViewController(myPopularViewController, animated: true, completion: nil)
-
         
     }
 
