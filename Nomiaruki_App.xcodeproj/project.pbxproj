@@ -18,6 +18,8 @@
 		B27DA5D21B8C3CE400A20569 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B27DA5D01B8C3CE400A20569 /* LaunchScreen.xib */; };
 		B27DA5DE1B8C3CE500A20569 /* Nomiaruki_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27DA5DD1B8C3CE500A20569 /* Nomiaruki_AppTests.swift */; };
 		B28E27291BBC3F0C0027D78B /* PlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28E27281BBC3F0C0027D78B /* PlaceViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		B28E272B1BBC500F0027D78B /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28E272A1BBC500F0027D78B /* FavoriteViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		B28E272D1BBC50230027D78B /* FavoritePlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28E272C1BBC50230027D78B /* FavoritePlaceViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		B2B29F111BBA002B00DB49E2 /* kubota2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2B29F101BBA002B00DB49E2 /* kubota2.jpg */; settings = {ASSET_TAGS = (); }; };
 		B2B29F131BBA25F900DB49E2 /* CustomUICollectionVIewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B29F121BBA25F900DB49E2 /* CustomUICollectionVIewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		E736401B1BA84718006B0368 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736401A1BA84718006B0368 /* FirstViewController.swift */; };
@@ -61,6 +63,8 @@
 		B27DA5DC1B8C3CE500A20569 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B27DA5DD1B8C3CE500A20569 /* Nomiaruki_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nomiaruki_AppTests.swift; sourceTree = "<group>"; };
 		B28E27281BBC3F0C0027D78B /* PlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceViewController.swift; sourceTree = "<group>"; };
+		B28E272A1BBC500F0027D78B /* FavoriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		B28E272C1BBC50230027D78B /* FavoritePlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritePlaceViewController.swift; sourceTree = "<group>"; };
 		B2B29F101BBA002B00DB49E2 /* kubota2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = kubota2.jpg; path = ../../../Downloads/kubota2.jpg; sourceTree = "<group>"; };
 		B2B29F121BBA25F900DB49E2 /* CustomUICollectionVIewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUICollectionVIewCell.swift; sourceTree = "<group>"; };
 		C574A135F351139856F954DD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -146,8 +150,10 @@
 				B27DA5C71B8C3CE400A20569 /* AppDelegate.swift */,
 				E736401E1BA848DF006B0368 /* ThirdViewController.swift */,
 				E753A57C1BB8E57200232C5E /* Bridging-Header.h */,
+				B28E272C1BBC50230027D78B /* FavoritePlaceViewController.swift */,
 				E736401A1BA84718006B0368 /* FirstViewController.swift */,
 				E7BFC4D71BA871C2000069EB /* PopularSakeViewController.swift */,
+				B28E272A1BBC500F0027D78B /* FavoriteViewController.swift */,
 				B228EE101BB7D2C4001EE0C2 /* PopularFoodViewController.swift */,
 				B228EE121BB7D2F2001EE0C2 /* PopularPlaceViewController.swift */,
 				E73640261BA85867006B0368 /* FourthViewController.swift */,
@@ -399,8 +405,10 @@
 				B228EE131BB7D2F2001EE0C2 /* PopularPlaceViewController.swift in Sources */,
 				E753A58F1BB8ED7B00232C5E /* RAMBounceAnimation.swift in Sources */,
 				E753A5951BB8ED7B00232C5E /* RAMItemAnimationProtocol.swift in Sources */,
+				B28E272D1BBC50230027D78B /* FavoritePlaceViewController.swift in Sources */,
 				B28E27291BBC3F0C0027D78B /* PlaceViewController.swift in Sources */,
 				B27DA5CA1B8C3CE400A20569 /* ViewController.swift in Sources */,
+				B28E272B1BBC500F0027D78B /* FavoriteViewController.swift in Sources */,
 				E753A5931BB8ED7B00232C5E /* RAMTransitionItemAnimation.swift in Sources */,
 				E753A5911BB8ED7B00232C5E /* RAMFumeAnimation.swift in Sources */,
 				E753A5921BB8ED7B00232C5E /* RAMRotationAnimation.swift in Sources */,

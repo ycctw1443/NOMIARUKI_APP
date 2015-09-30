@@ -8,6 +8,8 @@
 
 import UIKit
 
+public var favoriteItems: [AnyObject] = []
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     

@@ -8,7 +8,6 @@
 
 import UIKit
 
-public var favoriteItems: NSArray = []
 
 class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -31,6 +30,8 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     
+    // Tableで使用する配列を設定する
+    private let myItems: NSArray = ["食べ合わせ","お店"]
     private var myTableView: UITableView!
     
     
@@ -39,9 +40,9 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         
         // Labelを作成.
-        let myLabel: UILabel = UILabel(frame: CGRectMake(0,0,250,50))
+        let myLabel: UILabel = UILabel(frame: CGRectMake(0,0,200,50))
         // Labelに文字を代入.
-        myLabel.text = "あなたのお気に入り食べ合わせ"
+        myLabel.text = "あなたのお気に入り"
         // 文字の色を白にする.
         myLabel.textColor = UIColor.blackColor()
         // Textを中央寄せにする.
@@ -51,13 +52,17 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
         // ViewにLabelを追加.
         self.view.addSubview(myLabel)
         
-        
+
+        /*
+        テーブルの生成
+        */
         // Status Barの高さを取得する.
         let barHeight: CGFloat = UIApplication.sharedApplication().statusBarFrame.size.height
         
         // Viewの高さと幅を取得する.
         let displayWidth: CGFloat = self.view.frame.width
         let displayHeight: CGFloat = self.view.frame.height
+        
         
         // TableViewの生成する(status barの高さ分ずらして表示).
         myTableView = UITableView(frame: CGRect(x: 0, y: barHeight + 50, width: displayWidth, height: displayHeight - barHeight - 50))
@@ -73,26 +78,28 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         // Viewに追加する.
         self.view.addSubview(myTableView)
+        
     }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    /*
-    Cellが選択された際に呼び出されるデリゲートメソッド.
-    */
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("Num: \(indexPath.row)")
-        print("Value: \(favoriteItems[indexPath.row])")
-    }
     
     /*
     Cellの総数を返すデータソースメソッド.
     (実装必須)
     */
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return favoriteItems.count
+        return myItems.count
+    }
+    
+    /*
+    Cellの1行のサイズを変更
+    */
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 250
     }
     
     /*
@@ -102,12 +109,47 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         // 再利用するCellを取得する.
-        let cell = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath)
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyCell")
         
         // Cellに値を設定する.
-        cell.textLabel!.text = "\(favoriteItems[indexPath.row])"
+        cell.textLabel!.text = "\(myItems[indexPath.row])"
+        cell.textLabel!.textColor = UIColor.blackColor()
+        cell.textLabel!.font = UIFont.boldSystemFontOfSize(25)
         
         return cell
+    }
+    
+    /*
+    Cellが選択された時の動作
+    */
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let num = indexPath.row
+        
+        switch num{
+            
+        case 0:
+            //一番上の項目を選択した場合の画面遷移
+            // 遷移するViewを定義する.
+            let myPopularViewController: UIViewController = FavoriteViewController()
+            // アニメーションを設定する.
+            myPopularViewController.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+            // Viewの移動する.
+            self.presentViewController(myPopularViewController, animated: true, completion: nil)
+            
+        case 1:
+            //二番目を選択した場合の画面遷移
+            // 遷移するViewを定義する.
+            let myPopularViewController: UIViewController = FavoritePlaceViewController()
+            // アニメーションを設定する.
+            myPopularViewController.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+            // Viewの移動する.
+            self.presentViewController(myPopularViewController, animated: true, completion: nil)
+            
+        default:
+            break
+        }
+        
     }
     
     
