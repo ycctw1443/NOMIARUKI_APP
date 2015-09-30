@@ -124,8 +124,6 @@ class PopularSakeViewController: UIViewController,UITableViewDelegate, UITableVi
         //セル選択時になにも起きないようにする
         if num2%2 == 0{
             cell.selectedBackgroundView = UIImageView(image: backgroundImage)
-        }else{
-            cell.selectionStyle = .None
         }
         
         return cell
