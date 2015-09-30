@@ -93,6 +93,22 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     /*
+    Editableの状態にする.
+    */
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        print("canEditRowAtIndexPath")
+        
+        return true
+    }
+    
+    /*
+    特定の行のボタン操作を有効にする.
+    */
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        print("commitEdittingStyle:\(editingStyle)")
+    }
+    
+    /*
     Cellに値を設定するデータソースメソッド.
     (実装必須)
     */
@@ -105,6 +121,29 @@ class FavoriteViewController: UIViewController, UITableViewDelegate, UITableView
         cell.textLabel!.text = "\(favoriteItems[indexPath.row])"
         
         return cell
+    }
+    
+    /*
+    Buttonを拡張する. [AnyObject]?を[UITableViewRowAction]?に変更すること！
+    */
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        
+        
+        // ボタン.
+        let myFavoriteButton: UITableViewRowAction = UITableViewRowAction(style: .Normal, title: "Delete") { (action, index) -> Void in
+            
+            tableView.editing = false
+            print("delete")
+            //削除
+            favoriteItems.removeAtIndex(indexPath.row)
+            //更新
+            self.myTableView.reloadData()
+            
+        }
+        myFavoriteButton.backgroundColor = UIColor.redColor()
+        
+        
+        return [myFavoriteButton]
     }
     
     /*
