@@ -8,12 +8,14 @@
 
 import UIKit
 
-class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+public var favoriteItems: NSArray = []
+
+class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     init() {
         super.init(nibName: nil, bundle: nil)
         
-        // Viewの背景色をGreenに設定する.
+        // Viewの背景色を白に設定する.
         self.view.backgroundColor = UIColor.whiteColor()
 
         // tabBarItemのアイコンをFavotitesに、タグを3と定義する.
@@ -28,66 +30,70 @@ class ThirdViewController: UIViewController, UICollectionViewDelegate, UICollect
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
-    var myCollectionView : UICollectionView!
+    
+    private var myTableView: UITableView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // CollectionViewのレイアウトを生成.
-        let layout = UICollectionViewFlowLayout()
         
-        // Cell一つ一つの大きさ.
-        layout.itemSize = CGSizeMake(50, 50)
+        // Status Barの高さを取得する.
+        let barHeight: CGFloat = UIApplication.sharedApplication().statusBarFrame.size.height
         
-        // Cellのマージン.
-        layout.sectionInset = UIEdgeInsetsMake(16, 16, 32, 16)
+        // Viewの高さと幅を取得する.
+        let displayWidth: CGFloat = self.view.frame.width
+        let displayHeight: CGFloat = self.view.frame.height
         
-        // セクション毎のヘッダーサイズ.
-        layout.headerReferenceSize = CGSizeMake(100,30)
+        // TableViewの生成する(status barの高さ分ずらして表示).
+        myTableView = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight - barHeight))
         
-        // CollectionViewを生成.
-        myCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+        // Cell名の登録をおこなう.
+        myTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
         
-        // Cellに使われるクラスを登録.
-        myCollectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "MyCell")
+        // DataSourceの設定をする.
+        myTableView.dataSource = self
         
-        myCollectionView.delegate = self
-        myCollectionView.dataSource = self
+        // Delegateを設定する.
+        myTableView.delegate = self
         
-        self.view.addSubview(myCollectionView)
-    }
-    
-    /*
-    Cellが選択された際に呼び出される
-    */
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
-        print("Num: \(indexPath.row)")
-        print("Value:\(collectionView)")
-        
-    }
-    
-    /*
-    Cellの総数を返す
-    */
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
-    }
-    
-    /*
-    Cellに値を設定する
-    */
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        
-        let cell : UICollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("MyCell",
-            forIndexPath: indexPath)
-        
-        cell.backgroundColor = UIColor.orangeColor()
-        return cell
+        // Viewに追加する.
+        self.view.addSubview(myTableView)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    /*
+    Cellが選択された際に呼び出されるデリゲートメソッド.
+    */
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("Num: \(indexPath.row)")
+        print("Value: \(favoriteItems[indexPath.row])")
+    }
+    
+    /*
+    Cellの総数を返すデータソースメソッド.
+    (実装必須)
+    */
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return favoriteItems.count
+    }
+    
+    /*
+    Cellに値を設定するデータソースメソッド.
+    (実装必須)
+    */
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        // 再利用するCellを取得する.
+        let cell = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath)
+        
+        // Cellに値を設定する.
+        cell.textLabel!.text = "\(favoriteItems[indexPath.row])"
+        
+        return cell
     }
     
     
