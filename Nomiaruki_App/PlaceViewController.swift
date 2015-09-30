@@ -1,18 +1,18 @@
 //
-//  PopularSakeViewController.swift
+//  PlaceViewController.swift
 //  Nomiaruki_App
 //
-//  Created by alan-arakawa-yoshihiro on H27/09/16.
-//  Copyright (c) 平成27年 alancodvo. All rights reserved.
+//  Created by 和田絢也 on 2015/10/01.
+//  Copyright © 2015年 alancodvo. All rights reserved.
 //
+
 
 import UIKit
 
-class PopularSakeViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+class PlaceViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     // Tableで使用する配列を設定する
-    private let myItems: NSArray = ["","さきイカ","","フルーツポンチ", "","刺し身"]
-    private let myItems2: NSArray = ["","★★★★","","★★★", "","★★★★★"]
+    private let myItems: NSArray = ["","長岡技大第九食堂",]
     private var myTableView: UITableView!
     
     
@@ -37,7 +37,7 @@ class PopularSakeViewController: UIViewController,UITableViewDelegate, UITableVi
         // Labelを作成.
         let myLabel: UILabel = UILabel(frame: CGRectMake(0,0,200,50))
         // Labelに文字を代入.
-        myLabel.text = "おすすめの料理"
+        myLabel.text = "頂けるお店"
         // 文字の色を白にする.
         myLabel.textColor = UIColor.blackColor()
         // Textを中央寄せにする.
@@ -46,7 +46,7 @@ class PopularSakeViewController: UIViewController,UITableViewDelegate, UITableVi
         myLabel.layer.position = CGPoint(x: self.view.bounds.width/2,y: 40)
         // ViewにLabelを追加.
         self.view.addSubview(myLabel)
-    
+        
         
         //
         //テーブルの生成
@@ -106,45 +106,23 @@ class PopularSakeViewController: UIViewController,UITableViewDelegate, UITableVi
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyCell")
         
         let num2 = indexPath.row
-        let backgroundImage: UIImage = UIImage(named:"tochio.jpeg")!
         
         if num2%2 == 0{
             //背景画像の設定
+            let backgroundImage: UIImage = UIImage(named:"tochio.jpeg")!
             cell.backgroundView = UIImageView(image: backgroundImage)
         }else{
             // Cellに値を設定する.
             cell.textLabel!.text = "\(myItems[indexPath.row])"
             cell.textLabel!.font = UIFont.boldSystemFontOfSize(18)
             
-            cell.detailTextLabel!.text = "\(myItems2[indexPath.row])"
-            cell.detailTextLabel!.textColor = UIColor.orangeColor()
-            cell.detailTextLabel!.font = UIFont.boldSystemFontOfSize(12)
         }
         
         //セル選択時になにも起きないようにする
-        if num2%2 == 0{
-            cell.selectedBackgroundView = UIImageView(image: backgroundImage)
-        }else{
-            cell.selectionStyle = .None
-        }
+        cell.selectionStyle = .None
         
         return cell
     }
-    
-    /*
-    Cellが選択された時の動作
-    */
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-            let myPopularViewController: UIViewController = PlaceViewController()
-            // アニメーションを設定する.
-            myPopularViewController.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
-            // Viewの移動する.
-            self.presentViewController(myPopularViewController, animated: true, completion: nil)
-
-        
-    }
-
     
     /*
     ボタンイベント.
