@@ -12,7 +12,7 @@ import UIKit
 class PlaceViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     // Tableで使用する配列を設定する
-    private let myItems: NSArray = ["","長岡技大第九食堂",]
+    private let myItems: NSArray = ["","長岡技大第九食堂","","長岡技大第十食堂","","長岡技大第十一食堂"]
     private var myTableView: UITableView!
     
     
