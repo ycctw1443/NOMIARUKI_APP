@@ -38,6 +38,20 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         
         
+        // Labelを作成.
+        let myLabel: UILabel = UILabel(frame: CGRectMake(0,0,250,50))
+        // Labelに文字を代入.
+        myLabel.text = "あなたのお気に入り食べ合わせ"
+        // 文字の色を白にする.
+        myLabel.textColor = UIColor.blackColor()
+        // Textを中央寄せにする.
+        myLabel.textAlignment = NSTextAlignment.Center
+        // 配置する座標を設定する.
+        myLabel.layer.position = CGPoint(x: self.view.bounds.width/2,y: 40)
+        // ViewにLabelを追加.
+        self.view.addSubview(myLabel)
+        
+        
         // Status Barの高さを取得する.
         let barHeight: CGFloat = UIApplication.sharedApplication().statusBarFrame.size.height
         
@@ -46,7 +60,7 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let displayHeight: CGFloat = self.view.frame.height
         
         // TableViewの生成する(status barの高さ分ずらして表示).
-        myTableView = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight - barHeight))
+        myTableView = UITableView(frame: CGRect(x: 0, y: barHeight + 50, width: displayWidth, height: displayHeight - barHeight - 50))
         
         // Cell名の登録をおこなう.
         myTableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
