@@ -80,7 +80,7 @@ class FavoritePlaceViewController: UIViewController, UITableViewDelegate, UITabl
     */
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("Num: \(indexPath.row)")
-        print("Value: \(favoriteItems[indexPath.row])")
+        print("Value: \(favoritePlaceItems[indexPath.row])")
     }
     
     /*
@@ -88,7 +88,7 @@ class FavoritePlaceViewController: UIViewController, UITableViewDelegate, UITabl
     (実装必須)
     */
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return favoriteItems.count
+        return favoritePlaceItems.count
     }
     
     /*
@@ -101,7 +101,7 @@ class FavoritePlaceViewController: UIViewController, UITableViewDelegate, UITabl
         let cell = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath)
         
         // Cellに値を設定する.
-        cell.textLabel!.text = "\(favoriteItems[indexPath.row])"
+        cell.textLabel!.text = "\(favoritePlaceItems[indexPath.row])"
         
         return cell
     }

@@ -85,6 +85,22 @@ class PopularPlaceViewController: UIViewController,UITableViewDelegate, UITableV
     }
     
     /*
+    Editableの状態にする.
+    */
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        print("canEditRowAtIndexPath")
+        
+        return true
+    }
+    
+    /*
+    特定の行のボタン操作を有効にする.
+    */
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        print("commitEdittingStyle:\(editingStyle)")
+    }
+    
+    /*
     Cellの1行のサイズを変更
     */
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -120,6 +136,27 @@ class PopularPlaceViewController: UIViewController,UITableViewDelegate, UITableV
         cell.selectionStyle = .None
         
         return cell
+    }
+    
+    /*
+    Buttonを拡張する. [AnyObject]?を[UITableViewRowAction]?に変更すること！
+    */
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        
+        
+        // Shareボタン.
+        let myFavoriteButton: UITableViewRowAction = UITableViewRowAction(style: .Normal, title: "Favorite") { (action, index) -> Void in
+            
+            tableView.editing = false
+            print("Favorite")
+            favoritePlaceItems.append("長岡技大大三食堂")
+            print(favoritePlaceItems)
+            
+        }
+        myFavoriteButton.backgroundColor = UIColor.orangeColor()
+        
+        
+        return [myFavoriteButton]
     }
     
     

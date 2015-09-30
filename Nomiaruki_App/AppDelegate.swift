@@ -9,6 +9,7 @@
 import UIKit
 
 public var favoriteItems: [AnyObject] = []
+public var favoritePlaceItems: [AnyObject] = []
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
