@@ -105,10 +105,10 @@ class PopularFoodViewController: UIViewController,UITableViewDelegate, UITableVi
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyCell")
         
         let num2 = indexPath.row
+        let backgroundImage: UIImage = UIImage(named:"tochio.jpeg")!
         
         if num2%2 == 0{
             //背景画像の設定
-            let backgroundImage: UIImage = UIImage(named:"tochio.jpeg")!
             cell.backgroundView = UIImageView(image: backgroundImage)
         }else{
             // Cellに値を設定する.
@@ -117,9 +117,26 @@ class PopularFoodViewController: UIViewController,UITableViewDelegate, UITableVi
         }
         
         //セル選択時になにも起きないようにする
-        cell.selectionStyle = .None
+        if num2%2 == 0{
+            cell.selectedBackgroundView = UIImageView(image: backgroundImage)
+        }
+        
         
         return cell
+    }
+    
+    /*
+    Cellが選択された時の動作
+    */
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let myPopularViewController: UIViewController = PlaceViewController()
+        // アニメーションを設定する.
+        myPopularViewController.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+        // Viewの移動する.
+        self.presentViewController(myPopularViewController, animated: true, completion: nil)
+        
+        
     }
     
     
