@@ -11,8 +11,8 @@ import UIKit
 class PopularSakeViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     // Tableで使用する配列を設定する
-    private let myItems: NSArray = ["","さきイカ","","フルーツポンチ", "","刺し身"]
-    private let myItems2: NSArray = ["","★★★★","","★★★", "","★★★★★"]
+    private let myItems: NSArray = ["","イカの沖漬け","","サラダホープ", "","たこわさ"]
+    private let myItems2: NSArray = ["","★★★★★","","★★★★★", "","★★★★"]
     private var myTableView: UITableView!
     
     
@@ -123,11 +123,24 @@ class PopularSakeViewController: UIViewController,UITableViewDelegate, UITableVi
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyCell")
         
         let num2 = indexPath.row
-        let backgroundImage: UIImage = UIImage(named:"tochio.jpeg")!
         
         if num2%2 == 0{
-            //背景画像の設定
-            cell.backgroundView = UIImageView(image: backgroundImage)
+            if num2 == 0{
+                let backgroundImage: UIImage = UIImage(named:"ika.jpg")!
+                //背景画像の設定
+                cell.backgroundView = UIImageView(image: backgroundImage)
+                cell.selectedBackgroundView = UIImageView(image: backgroundImage)
+            }else if num2 == 2{
+                let backgroundImage: UIImage = UIImage(named:"sarada.jpg")!
+                //背景画像の設定
+                cell.backgroundView = UIImageView(image: backgroundImage)
+                cell.selectedBackgroundView = UIImageView(image: backgroundImage)
+            }else if num2 == 4{
+                let backgroundImage: UIImage = UIImage(named:"takowasa.jpg")!
+                //背景画像の設定
+                cell.backgroundView = UIImageView(image: backgroundImage)
+                cell.selectedBackgroundView = UIImageView(image: backgroundImage)
+            }
         }else{
             // Cellに値を設定する.
             cell.textLabel!.text = "\(myItems[indexPath.row])"
@@ -138,10 +151,6 @@ class PopularSakeViewController: UIViewController,UITableViewDelegate, UITableVi
             cell.detailTextLabel!.font = UIFont.boldSystemFontOfSize(12)
         }
         
-        //セル選択時になにも起きないようにする
-        if num2%2 == 0{
-            cell.selectedBackgroundView = UIImageView(image: backgroundImage)
-        }
         
         return cell
     }
@@ -170,7 +179,8 @@ class PopularSakeViewController: UIViewController,UITableViewDelegate, UITableVi
             
             tableView.editing = false
             print("Favorite")
-            favoriteItems.append("久保田×久保田")
+            let text = "久保田×" + "\(self.myItems[indexPath.row])"
+            favoriteItems.append(text)
             print(favoriteItems)
             
         }
