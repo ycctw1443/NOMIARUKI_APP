@@ -12,7 +12,7 @@ import UIKit
 class PlaceViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     // Tableで使用する配列を設定する
-    private let myItems: NSArray = ["","長岡技大第九食堂","","長岡技大第十食堂","","長岡技大第十一食堂"]
+    private let myItems: NSArray = ["","長岡技大第五食堂","","長岡技大第六食堂","","長岡技大第七食堂"]
     private var myTableView: UITableView!
     
     
@@ -109,7 +109,7 @@ class PlaceViewController: UIViewController,UITableViewDelegate, UITableViewData
         
         if num2%2 == 0{
             //背景画像の設定
-            let backgroundImage: UIImage = UIImage(named:"tochio.jpeg")!
+            let backgroundImage: UIImage = UIImage(named:"gakusyoku.jpeg")!
             cell.backgroundView = UIImageView(image: backgroundImage)
         }else{
             // Cellに値を設定する.
