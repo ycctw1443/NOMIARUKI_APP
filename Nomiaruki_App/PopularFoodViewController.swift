@@ -11,7 +11,7 @@ import UIKit
 class PopularFoodViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     // Tableで使用する配列を設定する
-    private let myItems: NSArray = ["","吉野川","","麒麟山", "","景虎"]
+    private let myItems: NSArray = ["","上善如水","","雪中梅", "","緑川"]
     private var myTableView: UITableView!
     
     
@@ -121,22 +121,29 @@ class PopularFoodViewController: UIViewController,UITableViewDelegate, UITableVi
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyCell")
         
         let num2 = indexPath.row
-        let backgroundImage: UIImage = UIImage(named:"tochio.jpeg")!
         
         if num2%2 == 0{
-            //背景画像の設定
-            cell.backgroundView = UIImageView(image: backgroundImage)
+            if num2 == 0{
+                let backgroundImage: UIImage = UIImage(named:"jouzen.jpg")!
+                //背景画像の設定
+                cell.backgroundView = UIImageView(image: backgroundImage)
+                cell.selectedBackgroundView = UIImageView(image: backgroundImage)
+            }else if num2 == 2{
+                let backgroundImage: UIImage = UIImage(named:"settyuubai.jpg")!
+                //背景画像の設定
+                cell.backgroundView = UIImageView(image: backgroundImage)
+                cell.selectedBackgroundView = UIImageView(image: backgroundImage)
+            }else if num2 == 4{
+                let backgroundImage: UIImage = UIImage(named:"midorikawa.jpeg")!
+                //背景画像の設定
+                cell.backgroundView = UIImageView(image: backgroundImage)
+                cell.selectedBackgroundView = UIImageView(image: backgroundImage)
+            }
         }else{
             // Cellに値を設定する.
             cell.textLabel!.text = "\(myItems[indexPath.row])"
             cell.textLabel!.font = UIFont.boldSystemFontOfSize(18)
         }
-        
-        //セル選択時になにも起きないようにする
-        if num2%2 == 0{
-            cell.selectedBackgroundView = UIImageView(image: backgroundImage)
-        }
-        
         
         return cell
     }
@@ -166,7 +173,8 @@ class PopularFoodViewController: UIViewController,UITableViewDelegate, UITableVi
             
             tableView.editing = false
             print("Favorite")
-            favoriteItems.append("久保田×久保田")
+            let text = "栃尾の油揚げ×" + "\(self.myItems[indexPath.row])"
+            favoriteItems.append(text)
             print(favoriteItems)
             
         }
