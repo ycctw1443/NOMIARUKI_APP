@@ -11,7 +11,8 @@ import UIKit
 class PopularPlaceViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
     // Tableで使用する配列を設定する
-    private let myItems: NSArray = ["","吉野川×さきイカ","","麒麟山×貝柱", "","景虎×刺し身"]
+    private let myItems: NSArray = ["","菊水×黒埼茶豆","","越乃寒梅×鯖の味噌煮", "","〆張鶴×あじのお造り"]
+    private let myImages: NSArray = ["kikumame.jpg","","kanbaisaba.jpg","", "simeharisaba.jpg",""]
     private var myTableView: UITableView!
     
     
@@ -124,7 +125,7 @@ class PopularPlaceViewController: UIViewController,UITableViewDelegate, UITableV
         
         if num2%2 == 0{
             //背景画像の設定
-            let backgroundImage: UIImage = UIImage(named:"tochio.jpeg")!
+            let backgroundImage: UIImage = UIImage(named:"\(myImages[indexPath.row])")!
             cell.backgroundView = UIImageView(image: backgroundImage)
         }else{
             // Cellに値を設定する.
@@ -149,8 +150,8 @@ class PopularPlaceViewController: UIViewController,UITableViewDelegate, UITableV
             
             tableView.editing = false
             print("Favorite")
-            favoritePlaceItems.append("長岡技大大三食堂")
-            print(favoritePlaceItems)
+            favoriteItems.append("\(self.myItems[indexPath.row])")
+            print(favoriteItems)
             
         }
         myFavoriteButton.backgroundColor = UIColor.orangeColor()
