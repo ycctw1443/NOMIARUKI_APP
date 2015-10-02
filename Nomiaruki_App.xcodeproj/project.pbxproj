@@ -30,6 +30,12 @@
 		B2B59A021BBEFC60005132B2 /* jouzen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2B599FF1BBEFC60005132B2 /* jouzen.jpg */; settings = {ASSET_TAGS = (); }; };
 		B2B59A031BBEFC60005132B2 /* midorikawa.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = B2B59A001BBEFC60005132B2 /* midorikawa.jpeg */; settings = {ASSET_TAGS = (); }; };
 		B2B59A041BBEFC60005132B2 /* settyuubai.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2B59A011BBEFC60005132B2 /* settyuubai.jpg */; settings = {ASSET_TAGS = (); }; };
+		B2B59A0B1BBEFDEA005132B2 /* hakkaisan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2B59A051BBEFDEA005132B2 /* hakkaisan.jpg */; settings = {ASSET_TAGS = (); }; };
+		B2B59A0C1BBEFDEA005132B2 /* hotate.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2B59A061BBEFDEA005132B2 /* hotate.jpg */; settings = {ASSET_TAGS = (); }; };
+		B2B59A0D1BBEFDEA005132B2 /* kagetora.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2B59A071BBEFDEA005132B2 /* kagetora.jpg */; settings = {ASSET_TAGS = (); }; };
+		B2B59A0E1BBEFDEA005132B2 /* kakinotane.JPG in Resources */ = {isa = PBXBuildFile; fileRef = B2B59A081BBEFDEA005132B2 /* kakinotane.JPG */; settings = {ASSET_TAGS = (); }; };
+		B2B59A0F1BBEFDEA005132B2 /* kiyoizumi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2B59A091BBEFDEA005132B2 /* kiyoizumi.jpg */; settings = {ASSET_TAGS = (); }; };
+		B2B59A101BBEFDEA005132B2 /* motsuni.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2B59A0A1BBEFDEA005132B2 /* motsuni.jpg */; settings = {ASSET_TAGS = (); }; };
 		E736401B1BA84718006B0368 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736401A1BA84718006B0368 /* FirstViewController.swift */; };
 		E736401D1BA84737006B0368 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736401C1BA84737006B0368 /* SecondViewController.swift */; };
 		E736401F1BA848DF006B0368 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736401E1BA848DF006B0368 /* ThirdViewController.swift */; };
@@ -83,6 +89,12 @@
 		B2B599FF1BBEFC60005132B2 /* jouzen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = jouzen.jpg; path = "../../../Desktop/名称未設定フォルダ/jouzen.jpg"; sourceTree = "<group>"; };
 		B2B59A001BBEFC60005132B2 /* midorikawa.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = midorikawa.jpeg; path = "../../../Desktop/名称未設定フォルダ/midorikawa.jpeg"; sourceTree = "<group>"; };
 		B2B59A011BBEFC60005132B2 /* settyuubai.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = settyuubai.jpg; path = "../../../Desktop/名称未設定フォルダ/settyuubai.jpg"; sourceTree = "<group>"; };
+		B2B59A051BBEFDEA005132B2 /* hakkaisan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hakkaisan.jpg; path = "../../../Desktop/名称未設定フォルダ/hakkaisan.jpg"; sourceTree = "<group>"; };
+		B2B59A061BBEFDEA005132B2 /* hotate.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = hotate.jpg; path = "../../../Desktop/名称未設定フォルダ/hotate.jpg"; sourceTree = "<group>"; };
+		B2B59A071BBEFDEA005132B2 /* kagetora.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = kagetora.jpg; path = "../../../Desktop/名称未設定フォルダ/kagetora.jpg"; sourceTree = "<group>"; };
+		B2B59A081BBEFDEA005132B2 /* kakinotane.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = kakinotane.JPG; path = "../../../Desktop/名称未設定フォルダ/kakinotane.JPG"; sourceTree = "<group>"; };
+		B2B59A091BBEFDEA005132B2 /* kiyoizumi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = kiyoizumi.jpg; path = "../../../Desktop/名称未設定フォルダ/kiyoizumi.jpg"; sourceTree = "<group>"; };
+		B2B59A0A1BBEFDEA005132B2 /* motsuni.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = motsuni.jpg; path = "../../../Desktop/名称未設定フォルダ/motsuni.jpg"; sourceTree = "<group>"; };
 		C574A135F351139856F954DD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E736401A1BA84718006B0368 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		E736401C1BA84737006B0368 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +174,12 @@
 				B24E1ECE1BB89ED600E5A4B6 /* tochio.jpeg */,
 				B2B599FD1BBEFAA8005132B2 /* sarada.jpg */,
 				B2B599F91BBEFA85005132B2 /* ika.jpg */,
+				B2B59A051BBEFDEA005132B2 /* hakkaisan.jpg */,
+				B2B59A061BBEFDEA005132B2 /* hotate.jpg */,
+				B2B59A071BBEFDEA005132B2 /* kagetora.jpg */,
+				B2B59A081BBEFDEA005132B2 /* kakinotane.JPG */,
+				B2B59A091BBEFDEA005132B2 /* kiyoizumi.jpg */,
+				B2B59A0A1BBEFDEA005132B2 /* motsuni.jpg */,
 				B2B599FA1BBEFA85005132B2 /* takowasa.jpg */,
 				B2B599FF1BBEFC60005132B2 /* jouzen.jpg */,
 				B2B59A001BBEFC60005132B2 /* midorikawa.jpeg */,
@@ -363,16 +381,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				B27DA5CD1B8C3CE400A20569 /* Main.storyboard in Resources */,
+				B2B59A0E1BBEFDEA005132B2 /* kakinotane.JPG in Resources */,
 				B24E1ECF1BB89ED600E5A4B6 /* tochio.jpeg in Resources */,
 				B2B599FC1BBEFA85005132B2 /* takowasa.jpg in Resources */,
+				B2B59A101BBEFDEA005132B2 /* motsuni.jpg in Resources */,
+				B2B59A0F1BBEFDEA005132B2 /* kiyoizumi.jpg in Resources */,
+				B2B59A0C1BBEFDEA005132B2 /* hotate.jpg in Resources */,
 				B2B59A031BBEFC60005132B2 /* midorikawa.jpeg in Resources */,
 				B27DA5D21B8C3CE400A20569 /* LaunchScreen.xib in Resources */,
 				B2B599FB1BBEFA85005132B2 /* ika.jpg in Resources */,
 				B2B599F71BBEF7A7005132B2 /* gakusyoku.jpg in Resources */,
 				B2B59A041BBEFC60005132B2 /* settyuubai.jpg in Resources */,
+				B2B59A0D1BBEFDEA005132B2 /* kagetora.jpg in Resources */,
 				B27DA5CF1B8C3CE400A20569 /* Images.xcassets in Resources */,
 				B2B59A021BBEFC60005132B2 /* jouzen.jpg in Resources */,
 				B2B599F81BBEF7A7005132B2 /* kubota.jpg in Resources */,
+				B2B59A0B1BBEFDEA005132B2 /* hakkaisan.jpg in Resources */,
 				B2B29F111BBA002B00DB49E2 /* kubota2.jpg in Resources */,
 				B2B599FE1BBEFAA8005132B2 /* sarada.jpg in Resources */,
 			);

@@ -27,6 +27,13 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
     }
     
     var myCollectionView : UICollectionView!
+    private let myItems1: NSArray = ["八海山","","柿の種"]
+    private let myItems2: NSArray = ["越乃景虎","","ホタテ貝柱"]
+    private let myItems3: NSArray = ["清泉","","モツ煮"]
+    private let myImages1: NSArray = ["hakkaisan.jpg","","kakinotane.JPG"]
+    private let myImages2: NSArray = ["kagetora.jpg","","hotate.jpg"]
+    private let myImages3: NSArray = ["kiyoizumi.jpg","","motsuni.jpg"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -115,12 +122,28 @@ class SecondViewController: UIViewController, UICollectionViewDelegate, UICollec
                 cell.textLabel?.textColor = UIColor.blackColor()
                 cell.textLabel?.font = UIFont.boldSystemFontOfSize(60)
             }else{
-                //背景画像の設定
-                let backgroundImage: UIImage = UIImage(named:"kubota2.jpg")!
-                cell.backgroundView = UIImageView(image: backgroundImage)
-                cell.textLabel?.text = "久保田"
-                cell.textLabel?.textColor = UIColor.whiteColor()
-                cell.textLabel?.font = UIFont.boldSystemFontOfSize(25)
+                if indexPath.section == 0{
+                    let backgroundImage: UIImage = UIImage(named:"\(myImages1[indexPath.row])")!
+                    cell.backgroundView = UIImageView(image: backgroundImage)
+                    cell.textLabel?.text = "\(myItems1[indexPath.row])"
+                    cell.textLabel?.textColor = UIColor.whiteColor()
+                    cell.textLabel?.font = UIFont.boldSystemFontOfSize(25)
+                    cell.textLabel!.shadowColor = UIColor.grayColor()
+                }else if indexPath.section == 1{
+                    let backgroundImage: UIImage = UIImage(named:"\(myImages2[indexPath.row])")!
+                    cell.backgroundView = UIImageView(image: backgroundImage)
+                    cell.textLabel?.text = "\(myItems2[indexPath.row])"
+                    cell.textLabel?.textColor = UIColor.whiteColor()
+                    cell.textLabel?.font = UIFont.boldSystemFontOfSize(25)
+                    cell.textLabel!.shadowColor = UIColor.grayColor()
+                }else if indexPath.section == 2{
+                    let backgroundImage: UIImage = UIImage(named:"\(myImages3[indexPath.row])")!
+                    cell.backgroundView = UIImageView(image: backgroundImage)
+                    cell.textLabel?.text = "\(myItems3[indexPath.row])"
+                    cell.textLabel?.textColor = UIColor.whiteColor()
+                    cell.textLabel?.font = UIFont.boldSystemFontOfSize(25)
+                    cell.textLabel!.shadowColor = UIColor.grayColor()
+                }
             }
             
         //default:
