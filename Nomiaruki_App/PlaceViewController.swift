@@ -109,7 +109,7 @@ class PlaceViewController: UIViewController,UITableViewDelegate, UITableViewData
         
         if num2%2 == 0{
             //背景画像の設定
-            let backgroundImage: UIImage = UIImage(named:"gakusyoku.jpeg")!
+            let backgroundImage: UIImage = UIImage(named:"gakusyoku.jpg")!
             cell.backgroundView = UIImageView(image: backgroundImage)
         }else{
             // Cellに値を設定する.
