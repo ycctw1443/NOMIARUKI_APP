@@ -29,7 +29,7 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
     private var mySearchBar: UISearchBar!
     
     // Tableで使用する配列を設定する
-    private let myItems: NSArray = ["久保田","栃尾の油揚げ", "長岡技大第三食堂"]
+    private let myItems: NSArray = ["久保田","栃尾の油揚げ", "長岡技大第一食堂"]
     private let myItems2: NSArray = ["人気の日本酒","人気の料理", "人気の店"]
     private var myTableView: UITableView!
     
@@ -146,17 +146,32 @@ class FirstViewController: UIViewController, UISearchBarDelegate, UITableViewDel
         cell.textLabel!.text = "\(myItems[indexPath.row])"
         cell.textLabel!.textColor = UIColor.whiteColor()
         cell.textLabel!.font = UIFont.boldSystemFontOfSize(25)
+        cell.textLabel!.shadowColor = UIColor.grayColor()
         
         cell.detailTextLabel!.text = "\(myItems2[indexPath.row])"
         cell.detailTextLabel!.textColor = UIColor.whiteColor()
         cell.detailTextLabel!.font = UIFont.boldSystemFontOfSize(14)
+        cell.detailTextLabel!.shadowColor = UIColor.grayColor()
         
         //背景画像の設定
-        let backgroundImage: UIImage = UIImage(named:"tochio.jpeg")!
-        cell.backgroundView = UIImageView(image: backgroundImage)
+        if indexPath.row == 0{
+            let backgroundImage: UIImage = UIImage(named:"kubota.jpg")!
+            cell.backgroundView = UIImageView(image: backgroundImage)
+            //セル選択時にセルが灰色になるのを防ぐ
+            cell.selectedBackgroundView = UIImageView(image: backgroundImage)
+        }else if indexPath.row == 1{
+            let backgroundImage: UIImage = UIImage(named:"tochio.jpeg")!
+            cell.backgroundView = UIImageView(image: backgroundImage)
+            //セル選択時にセルが灰色になるのを防ぐ
+            cell.selectedBackgroundView = UIImageView(image: backgroundImage)
+        }else{
+            let backgroundImage: UIImage = UIImage(named:"gakusyoku.jpg")!
+            cell.backgroundView = UIImageView(image: backgroundImage)
+            //セル選択時にセルが灰色になるのを防ぐ
+            cell.selectedBackgroundView = UIImageView(image: backgroundImage)
+            
+        }
         
-        //セル選択時にセルが灰色になるのを防ぐ
-        cell.selectedBackgroundView = UIImageView(image: backgroundImage)
         
         return cell
     }

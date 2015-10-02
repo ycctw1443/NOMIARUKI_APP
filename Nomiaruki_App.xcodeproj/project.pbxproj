@@ -22,6 +22,8 @@
 		B28E272D1BBC50230027D78B /* FavoritePlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28E272C1BBC50230027D78B /* FavoritePlaceViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		B2B29F111BBA002B00DB49E2 /* kubota2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2B29F101BBA002B00DB49E2 /* kubota2.jpg */; settings = {ASSET_TAGS = (); }; };
 		B2B29F131BBA25F900DB49E2 /* CustomUICollectionVIewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B29F121BBA25F900DB49E2 /* CustomUICollectionVIewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		B2B599F71BBEF7A7005132B2 /* gakusyoku.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2B599F51BBEF7A7005132B2 /* gakusyoku.jpg */; settings = {ASSET_TAGS = (); }; };
+		B2B599F81BBEF7A7005132B2 /* kubota.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B2B599F61BBEF7A7005132B2 /* kubota.jpg */; settings = {ASSET_TAGS = (); }; };
 		E736401B1BA84718006B0368 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736401A1BA84718006B0368 /* FirstViewController.swift */; };
 		E736401D1BA84737006B0368 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736401C1BA84737006B0368 /* SecondViewController.swift */; };
 		E736401F1BA848DF006B0368 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E736401E1BA848DF006B0368 /* ThirdViewController.swift */; };
@@ -67,6 +69,8 @@
 		B28E272C1BBC50230027D78B /* FavoritePlaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritePlaceViewController.swift; sourceTree = "<group>"; };
 		B2B29F101BBA002B00DB49E2 /* kubota2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = kubota2.jpg; path = ../../../Downloads/kubota2.jpg; sourceTree = "<group>"; };
 		B2B29F121BBA25F900DB49E2 /* CustomUICollectionVIewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUICollectionVIewCell.swift; sourceTree = "<group>"; };
+		B2B599F51BBEF7A7005132B2 /* gakusyoku.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = gakusyoku.jpg; path = "../../../Desktop/名称未設定フォルダ/gakusyoku.jpg"; sourceTree = "<group>"; };
+		B2B599F61BBEF7A7005132B2 /* kubota.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = kubota.jpg; path = "../../../Desktop/名称未設定フォルダ/kubota.jpg"; sourceTree = "<group>"; };
 		C574A135F351139856F954DD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E736401A1BA84718006B0368 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		E736401C1BA84737006B0368 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +148,8 @@
 			children = (
 				E753A5811BB8ED7A00232C5E /* RAMAnimatedTabBarController */,
 				B24E1ECE1BB89ED600E5A4B6 /* tochio.jpeg */,
+				B2B599F51BBEF7A7005132B2 /* gakusyoku.jpg */,
+				B2B599F61BBEF7A7005132B2 /* kubota.jpg */,
 				B2B29F101BBA002B00DB49E2 /* kubota2.jpg */,
 				B28E27281BBC3F0C0027D78B /* PlaceViewController.swift */,
 				B2B29F121BBA25F900DB49E2 /* CustomUICollectionVIewCell.swift */,
@@ -341,7 +347,9 @@
 				B27DA5CD1B8C3CE400A20569 /* Main.storyboard in Resources */,
 				B24E1ECF1BB89ED600E5A4B6 /* tochio.jpeg in Resources */,
 				B27DA5D21B8C3CE400A20569 /* LaunchScreen.xib in Resources */,
+				B2B599F71BBEF7A7005132B2 /* gakusyoku.jpg in Resources */,
 				B27DA5CF1B8C3CE400A20569 /* Images.xcassets in Resources */,
+				B2B599F81BBEF7A7005132B2 /* kubota.jpg in Resources */,
 				B2B29F111BBA002B00DB49E2 /* kubota2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
